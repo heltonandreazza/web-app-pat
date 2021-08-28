@@ -1,7 +1,3 @@
-import Carousel, {
-  autoplayPlugin,
-  slidesToShowPlugin,
-} from '@brainhubeu/react-carousel'
 import React, { useState } from 'react'
 import { LightningBoltIcon, XIcon, CheckIcon } from '@heroicons/react/outline'
 import filtroCentral from '../../images/filtroCentral.png'

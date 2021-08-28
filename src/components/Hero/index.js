@@ -1,16 +1,12 @@
-import Carousel from '@brainhubeu/react-carousel'
 import { Popover, Transition } from '@headlessui/react'
 import { MenuIcon, XIcon } from '@heroicons/react/outline'
 import React, { Fragment, useState } from 'react'
 import AnchorLink from 'react-anchor-link-smooth-scroll'
 import useInterval from '../../hooks/useInterval'
-import banner from '../../images/banner.jpeg'
-import banner2 from '../../images/banner2.jpeg'
-import banner3 from '../../images/banner3.jpeg'
-import banner5 from '../../images/banner5.jpeg'
 import { getWhatsUrl } from '../../utils'
 import { CTA_WA_MESSAGES, URLS } from '../../utils/constants'
 import { IconFB, IconInsta } from '../Icon'
+import Slider from '../Slider'
 const navigation = [
   { name: 'Clientes', href: '#clients' },
   { name: 'Serviços', href: '#services' },
@@ -215,21 +211,8 @@ const Hero = () => {
           </main>
         </div>
       </div>
-      <div className="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
-        <Carousel value={value} onChange={onChange}>
-          <img
-            className="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full"
-            src={banner}
-          />
-          <img
-            className="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full"
-            src={banner2}
-          />
-          <img
-            className="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full"
-            src={banner3}
-          />
-        </Carousel>
+      <div className="w-full lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2 md:h-full">
+        <Slider />
       </div>
     </div>
   )

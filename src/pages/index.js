@@ -1,4 +1,3 @@
-import '@brainhubeu/react-carousel/lib/style.css'
 import React from 'react'
 import BlogSection from '../components/BlogSection'
 import CtaSection from '../components/CtaSection'
