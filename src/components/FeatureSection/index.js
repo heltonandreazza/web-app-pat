@@ -63,7 +63,6 @@ const purifiersFeatures = [
 const purifiers = [
   {
     name: 'Purificador de água Soft BABY',
-    src: pBabyWhite,
     src2: cores3,
     href: 'https://www.softpurificadores.com.br/purificadores/soft-baby/',
     cta: CTA_WA_MESSAGES.products1,
@@ -76,7 +75,7 @@ const purifiers = [
             {...props}
           />
         ),
-        label: '',
+        label: 'Água gelada',
       },
       {
         icon: props => (
@@ -154,7 +153,6 @@ const purifiers = [
   },
   {
     name: 'Purificador de água Soft FIT',
-    src: pFitGray,
     src2: cores4,
     href: 'https://www.softpurificadores.com.br/purificadores/soft-fit/',
     cta: CTA_WA_MESSAGES.products2,
@@ -167,7 +165,7 @@ const purifiers = [
             {...props}
           />
         ),
-        label: '',
+        label: 'Água gelada',
       },
       {
         icon: props => (
@@ -210,7 +208,6 @@ const purifiers = [
   },
   {
     name: 'Purificador de água Soft SLIM',
-    src: pSlimRed,
     src2: cores4,
     href: 'https://www.softpurificadores.com.br/purificadores/soft-slim/',
     cta: CTA_WA_MESSAGES.products3,
@@ -223,7 +220,7 @@ const purifiers = [
             {...props}
           />
         ),
-        label: '',
+        label: 'Água gelada',
       },
       {
         icon: props => (
@@ -266,7 +263,6 @@ const purifiers = [
   },
   {
     name: 'Purificador de água Soft STAR',
-    src: pStarBlack,
     src2: cores4,
     href: 'https://www.softpurificadores.com.br/purificadores/soft-star/',
     cta: CTA_WA_MESSAGES.products4,
@@ -280,7 +276,7 @@ const purifiers = [
             {...props}
           />
         ),
-        label: '',
+        label: 'Água gelada',
       },
       {
         icon: props => (
@@ -323,7 +319,6 @@ const purifiers = [
   },
   {
     name: 'Purificador de água Soft PLUS',
-    src: pPlusGray,
     src2: cores4,
     href: 'https://www.softpurificadores.com.br/purificadores/soft-plus/',
     cta: CTA_WA_MESSAGES.products5,
@@ -376,6 +371,24 @@ const purifiers = [
       'p-slim-black.webp',
       'p-slim-gray.webp',
     ],
+  },
+]
+
+const filters = [
+  {
+    name: 'Filtro de água A',
+    src: filtroCentral,
+    cta: CTA_WA_MESSAGES.filter1,
+  },
+  {
+    name: 'Filtro de água B',
+    src: filtroCentral,
+    cta: CTA_WA_MESSAGES.filter2,
+  },
+  {
+    name: 'Filtro de água C',
+    src: filtroCentral,
+    cta: CTA_WA_MESSAGES.filter3,
   },
 ]
 
@@ -521,11 +534,62 @@ const FeatureSection = props => {
                 fill="url(#ca9667ae-9f92-4be7-abcb-9e3d727f2941)"
               />
             </svg>
-            <img
+            <div className="mt-10 -mx-4 relative lg:mt-0 lg:col-start-1">
+              {filters.map((p, index) => (
+                <ProductCard
+                  key={p.name}
+                  onClickDetails={() => {
+                    if (collapsedIndex === index) {
+                      setCollapsedIndex(-1)
+                    } else {
+                      setCollapsedIndex(index)
+                    }
+                  }}
+                  collapsed={collapsedIndex === index}
+                  {...p}
+                  srcWrapperClassName="h-60 w-16 px-8 my-2 pl-16"
+                  srcClassName="h-60 w-16 "
+                >
+                  <ul className="flex">
+                    <li>
+                      <p className="text-gray-500 mx-2">primeiro detalhe</p>
+                    </li>
+                    <li>
+                      <p className="text-gray-500 mx-2">segundo detalhe</p>
+                    </li>
+                  </ul>
+                  <ul className="flex">
+                    <li>
+                      <p className="text-gray-500 mx-2">primeiro detalhe</p>
+                    </li>
+                    <li>
+                      <p className="text-gray-500 mx-2">segundo detalhe</p>
+                    </li>
+                  </ul>
+                  <ul className="flex">
+                    <li>
+                      <p className="text-gray-500 mx-2">primeiro detalhe</p>
+                    </li>
+                    <li>
+                      <p className="text-gray-500 mx-2">segundo detalhe</p>
+                    </li>
+                  </ul>
+                  <ul className="flex">
+                    <li>
+                      <p className="text-gray-500 mx-2">primeiro detalhe</p>
+                    </li>
+                    <li>
+                      <p className="text-gray-500 mx-2">segundo detalhe</p>
+                    </li>
+                  </ul>
+                </ProductCard>
+              ))}
+            </div>
+            {/* <img
               className="relative mx-auto h-80 md:h-sm"
               src={filtroCentral}
               alt=""
-            />
+            /> */}
           </div>
         </div>
 

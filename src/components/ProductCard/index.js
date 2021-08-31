@@ -16,23 +16,37 @@ const ProductCard = ({
   onClickDetails,
   items,
   images,
+  srcWrapperClassName,
+  srcClassName,
+  children,
 }) => {
   return (
     <div className="flex items-center px-4 md:px-16 mt-4">
       <div className="flex flex-col p-4 md:p-0 bg-white shadow-xl rounded-xl w-full h-auto">
         <div className="flex flex-col md:flex-row items-center ">
-          <div className="relative h-40 w-40">
-            {/* <img className="h-40 w-40 rounded-xl" src={src} /> */}
-            <Slider
-              style={{
-                height: '10rem',
-                width: '10rem',
-                'border-radius': '0.75rem',
-              }}
-              images={images}
-            />
+          {images?.length && (
+            <div className={'relative h-40 w-40'}>
+              <Slider
+                style={{
+                  height: '10rem',
+                  width: '10rem',
+                  'border-radius': '0.75rem',
+                }}
+                images={images}
+              />
+            </div>
+          )}
+          {src && (
+            <div className={`flex h-40 w-auto ${srcWrapperClassName}`}>
+              <img
+                className={`h-40 w-auto rounded-xl ${srcClassName}`}
+                src={src}
+              />
+            </div>
+          )}
+          <div className="flex flex-col items-center">
+            {src2 && <img className="hidden md:flex h-20" src={src2} />}
           </div>
-          <img className="h-20" src={src2} />
           <div className="pl-8 flex flex-col items-center">
             <a
               className="text-lg text-gray-800 hover:text-blue-400 cursor-pointer font-bold"
@@ -41,6 +55,7 @@ const ProductCard = ({
             >
               {name}
             </a>
+            {children}
             <div className="flex">
               <a
                 href={getWhatsUrl(cta)}
@@ -50,12 +65,14 @@ const ProductCard = ({
               >
                 Eu quero esse
               </a>
-              <a
-                className="mt-2 ml-2 rounded-md shadow-md bg-blue-100 hover:bg-blue-200 cursor-pointer px-4 py-2 text-blue-600"
-                onClick={onClickDetails}
-              >
-                {`${collapsed ? '-' : '+'} Detalhes`}
-              </a>
+              {items && (
+                <a
+                  className="mt-2 ml-2 rounded-md shadow-md bg-blue-100 hover:bg-blue-200 cursor-pointer px-4 py-2 text-blue-600"
+                  onClick={onClickDetails}
+                >
+                  {`${collapsed ? '-' : '+'} Detalhes`}
+                </a>
+              )}
             </div>
           </div>
         </div>
@@ -69,8 +86,8 @@ const ProductCard = ({
           }}
         >
           {collapsed && (
-            <div className="px-2">
-              <ul className="flex flex-wrap items-center justify-center">
+            <div className="py-2 md:py-0 px-2">
+              <ul className="flex flex-col md:flex-row flex-wrap items-center justify-center">
                 {items?.map(item => (
                   <li key={item.label}>
                     <span className="text-medium mx-4 my-0.5 text-gray-500 flex items-center">

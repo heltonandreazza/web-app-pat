@@ -30,4 +30,10 @@ export const CTA_WA_MESSAGES = {
     'Olá, estive no site e me interessei no Purificador de água Soft STAR! Poderia me ajudar?',
   products5:
     'Olá, estive no site e me interessei no Purificador de água Soft PLUS! Poderia me ajudar?',
+  filter1:
+    'Olá, estive no site e me interessei no Filtro central de água A! Poderia me ajudar?',
+  filter2:
+    'Olá, estive no site e me interessei no Filtro central de água B! Poderia me ajudar?',
+  filter3:
+    'Olá, estive no site e me interessei no Filtro central de água C! Poderia me ajudar?',
 }

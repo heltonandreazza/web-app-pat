@@ -11,6 +11,7 @@ const navigation = {
     { name: 'Filtros', href: '#filters' },
     { name: 'Purificadores', href: '#purifiers' },
     { name: 'FAQ', href: '#faq' },
+    { name: 'Contato', href: '/contato' },
   ],
   social: [
     {
