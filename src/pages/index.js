@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import BlogSection from '../components/BlogSection'
 import CtaSection from '../components/CtaSection'
 import Faq from '../components/Faq'
@@ -10,6 +10,20 @@ import LogoClound from '../components/LogoClound'
 import '../styles/global.css'
 
 const Index = () => {
+  const [instaNodes, setInstaNodes] = useState(null)
+
+  async function loadInstaNodes() {
+    const response = await fetch(
+      'https://graph.instagram.com/me/media?fields=id,media_url,media_type,permalink,timestamp,caption,username,thumbnail_url,children{id,media_url,media_type,thumbnail_url,timestamp}&access_token=IGQVJWQVA2dG1DWXB6Qm82bDFGQnZAmYUktSTBYRmxWTW40QVBCbjRTRXQ3Szd5ZAG9tWGJvZAm5RVko2UEJOWWNJVXhPUkoxdkU0OGNGMUd5RE9mUjNoN2I4UlhTQ2JXUzFVSjdsQVNPZAmo3NDFnTUhGUQZDZD&limit=6',
+    )
+    const result = await response.json()
+    setInstaNodes(result?.data)
+  }
+
+  useEffect(() => {
+    loadInstaNodes()
+  }, [])
+
   return (
     <div>
       <main>
@@ -18,7 +32,7 @@ const Index = () => {
         <Header id="services" />
         <FeatureSection />
         <CtaSection />
-        <BlogSection />
+        <BlogSection items={instaNodes} />
         <Faq />
         <Footer />
       </main>

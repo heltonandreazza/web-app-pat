@@ -2,7 +2,7 @@ import { graphql, useStaticQuery } from 'gatsby'
 import BackgroundSlider from 'gatsby-image-background-slider'
 import React from 'react'
 
-const Slider = ({ children }) => (
+const Slider = ({ children, images, style }) => (
   <>
     <main>{children}</main>
     <BackgroundSlider
@@ -23,9 +23,10 @@ const Slider = ({ children }) => (
         }
       `)}
       initDelay={3} // delay before the first transition (if left at 0, the first image will be skipped initially)
-      images={['banner.jpeg', 'banner2.jpeg', 'banner3.jpeg']}
+      images={images}
       style={{
         zIndex: 1,
+        ...style,
       }}
     />
   </>

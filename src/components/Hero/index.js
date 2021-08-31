@@ -23,9 +23,6 @@ const Hero = () => {
     setValue(newValue)
   }, 3000)
 
-  const onChange = value => {
-    setValue(value)
-  }
   return (
     <div className="relative bg-white overflow-hidden">
       <div className="max-w-7xl mx-auto">
@@ -212,7 +209,7 @@ const Hero = () => {
         </div>
       </div>
       <div className="w-full lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2 md:h-full">
-        <Slider />
+        <Slider images={['banner.jpeg', 'banner2.jpeg', 'banner3.jpeg']} />
       </div>
     </div>
   )

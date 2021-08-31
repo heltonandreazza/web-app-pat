@@ -1,10 +1,9 @@
 import React from 'react'
 import logoiconfios from '../../images/logoiconfios.png'
 import logoipel from '../../images/logoipel.webp'
-import logouniasselvi from '../../images/logouniasselvi.svg'
+import logouniasselvi from '../../images/logouniasselvi.png'
 import logoartico from '../../images/logoartico.png'
-import logohercules from '../../images/logohercules.png'
-import logomuller from '../../images/logomuller.png'
+import logomuller from '../../images/logomueller.png'
 
 const clients = [
   {
@@ -14,10 +13,6 @@ const clients = [
   {
     href: 'https://portal.uniasselvi.com.br/',
     src: logouniasselvi,
-  },
-  {
-    href: 'https://www.herculesmotores.com.br/',
-    src: logohercules,
   },
   {
     href: 'https://www.ipelpapel.com.br/',
@@ -33,7 +28,7 @@ const clients = [
   },
 ]
 
-const LogoClound = props => {
+const LogoClound2 = props => {
   return (
     <div className="bg-white" {...props}>
       <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
@@ -56,6 +51,33 @@ const LogoClound = props => {
               <img className="max-h-12" src={c.src} alt="Workcation" />
             </a>
           ))}
+        </div>
+      </div>
+    </div>
+  )
+}
+
+const LogoClound = props => {
+  return (
+    <div className="bg-blue-700" {...props}>
+      <div className="max-w-7xl mx-auto py-16 px-4 sm:py-20 sm:px-6 lg:px-8">
+        <h2 className="text-3xl font-extrabold text-white">
+          Conheça os nossos clientes
+        </h2>
+        <div className="flow-root mt-8 lg:mt-10">
+          <div className="mt-6 grid grid-cols-1 gap-2 md:grid-cols-5 lg:mt-8">
+            {clients.map((c, i) => (
+              <a
+                key={c.href}
+                href={c.href}
+                target="_blank"
+                className={'col-span-1 flex justify-center p-0'}
+                rel="noreferrer"
+              >
+                <img className="h-16" src={c.src} alt="Workcation" />
+              </a>
+            ))}
+          </div>
         </div>
       </div>
     </div>

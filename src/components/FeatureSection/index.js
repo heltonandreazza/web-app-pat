@@ -1,17 +1,18 @@
+import { CheckIcon, LightningBoltIcon, XIcon } from '@heroicons/react/outline'
 import React, { useState } from 'react'
-import { LightningBoltIcon, XIcon, CheckIcon } from '@heroicons/react/outline'
+import cores3 from '../../images/cores3.png'
+import cores4 from '../../images/cores4.png'
 import filtroCentral from '../../images/filtroCentral.png'
 import pBabyWhite from '../../images/p-baby-white.webp'
 import pFitGray from '../../images/p-fit-gray.webp'
 import pPlusGray from '../../images/p-plus-gray.webp'
 import pSlimRed from '../../images/p-slim-red.webp'
 import pStarBlack from '../../images/p-star-black.webp'
-import cores3 from '../../images/cores3.png'
-import cores4 from '../../images/cores4.png'
 import { getWhatsUrl } from '../../utils'
 import { CTA_WA_MESSAGES } from '../../utils/constants'
+import ProductCard from '../ProductCard'
 
-const transferFeatures = [
+const filterFeatures = [
   {
     id: 1,
     description:
@@ -32,7 +33,7 @@ const transferFeatures = [
   },
 ]
 
-const communicationFeatures = [
+const purifiersFeatures = [
   {
     id: 1,
     description:
@@ -59,184 +60,327 @@ const communicationFeatures = [
   },
 ]
 
-const products = [
+const purifiers = [
   {
     name: 'Purificador de água Soft BABY',
-    refrigerator: false,
-    comercial: false,
     src: pBabyWhite,
     src2: cores3,
     href: 'https://www.softpurificadores.com.br/purificadores/soft-baby/',
-    weight: '1,75 Kg',
     cta: CTA_WA_MESSAGES.products1,
+    items: [
+      {
+        icon: props => (
+          <XIcon
+            className="h-6 w-6 text-red-500"
+            aria-hidden="true"
+            {...props}
+          />
+        ),
+        label: '',
+      },
+      {
+        icon: props => (
+          <XIcon
+            className="h-6 w-6 text-red-500"
+            aria-hidden="true"
+            {...props}
+          />
+        ),
+        label: 'Uso comercial',
+      },
+      {
+        label: 'Peso: 1,75 kg',
+      },
+      {
+        icon: props => (
+          <XIcon
+            className="h-6 w-6 text-red-500"
+            aria-hidden="true"
+            {...props}
+          />
+        ),
+        label: 'Armazenamento',
+      },
+      {
+        label: 'Dimensões: 28,0x19,5x18,5 cm',
+      },
+      {
+        icon: props => (
+          <XIcon
+            className="h-6 w-6 text-red-500"
+            aria-hidden="true"
+            {...props}
+          />
+        ),
+        label: 'Temperatura média da saída de água',
+      },
+      {
+        icon: props => (
+          <XIcon
+            className="h-6 w-6 text-red-500"
+            aria-hidden="true"
+            {...props}
+          />
+        ),
+        label: 'Capacidade de refrigeração',
+      },
+      {
+        icon: props => (
+          <XIcon
+            className="h-6 w-6 text-red-500"
+            aria-hidden="true"
+            {...props}
+          />
+        ),
+        label: 'Consumo de energia',
+      },
+      {
+        icon: props => (
+          <XIcon
+            className="h-6 w-6 text-red-500"
+            aria-hidden="true"
+            {...props}
+          />
+        ),
+        label: 'Potência',
+      },
+    ],
+    images: [
+      'p-baby-white.webp',
+      'p-baby-red.webp',
+      'p-baby-black.webp',
+      'p-baby-white.webp',
+    ],
   },
   {
     name: 'Purificador de água Soft FIT',
-    refrigerator: true,
-    comercial: false,
     src: pFitGray,
     src2: cores4,
     href: 'https://www.softpurificadores.com.br/purificadores/soft-fit/',
-    weight: '10,5 Kg',
     cta: CTA_WA_MESSAGES.products2,
-    capacity: '1,2 Litros',
+    items: [
+      {
+        icon: props => (
+          <CheckIcon
+            className="h-6 w-6 text-green-500"
+            aria-hidden="true"
+            {...props}
+          />
+        ),
+        label: '',
+      },
+      {
+        icon: props => (
+          <XIcon
+            className="h-6 w-6 text-red-500"
+            aria-hidden="true"
+            {...props}
+          />
+        ),
+        label: 'Uso comercial',
+      },
+      {
+        label: 'Peso: 10,5 kg',
+      },
+      {
+        label: 'Armazenamento: 1,2 litros',
+      },
+      {
+        label: 'Dimensões: 28,0x30,5x37,0 cm',
+      },
+      {
+        label: 'Temperatura média da saída de água: 8ºC',
+      },
+      {
+        label: 'Capacidade de refrigeração: 1,303 l/h',
+      },
+      {
+        label: 'Consumo: 4,950 kwh/mês',
+      },
+      {
+        label: 'Potência: 100w',
+      },
+    ],
+    images: [
+      'p-fit-white.webp',
+      'p-fit-red.webp',
+      'p-fit-black.webp',
+      'p-fit-gray.webp',
+    ],
   },
   {
     name: 'Purificador de água Soft SLIM',
-    refrigerator: true,
-    comercial: false,
     src: pSlimRed,
     src2: cores4,
     href: 'https://www.softpurificadores.com.br/purificadores/soft-slim/',
-    weight: '11 Kg',
     cta: CTA_WA_MESSAGES.products3,
-    capacity: '1,8 Litros',
+    items: [
+      {
+        icon: props => (
+          <CheckIcon
+            className="h-6 w-6 text-green-500"
+            aria-hidden="true"
+            {...props}
+          />
+        ),
+        label: '',
+      },
+      {
+        icon: props => (
+          <XIcon
+            className="h-6 w-6 text-red-500"
+            aria-hidden="true"
+            {...props}
+          />
+        ),
+        label: 'Uso comercial',
+      },
+      {
+        label: 'Peso: 11,0 kg',
+      },
+      {
+        label: 'Armazenamento: 1,8 litros',
+      },
+      {
+        label: 'Dimensões: 36,0x27,5x37,0 cm',
+      },
+      {
+        label: 'Temperatura média da saída de água: 8ºC',
+      },
+      {
+        label: 'Capacidade de refrigeração: 1,000 l/h',
+      },
+      {
+        label: 'Consumo: 5,100 kwh/mês',
+      },
+      {
+        label: 'Potência: 100w',
+      },
+    ],
+    images: [
+      'p-slim-white.webp',
+      'p-slim-red.webp',
+      'p-slim-black.webp',
+      'p-slim-gray.webp',
+    ],
   },
   {
     name: 'Purificador de água Soft STAR',
-    refrigerator: true,
-    comercial: false,
     src: pStarBlack,
     src2: cores4,
     href: 'https://www.softpurificadores.com.br/purificadores/soft-star/',
-    weight: '12 Kg',
     cta: CTA_WA_MESSAGES.products4,
     capacity: '2 Litros',
+    items: [
+      {
+        icon: props => (
+          <CheckIcon
+            className="h-6 w-6 text-green-500"
+            aria-hidden="true"
+            {...props}
+          />
+        ),
+        label: '',
+      },
+      {
+        icon: props => (
+          <XIcon
+            className="h-6 w-6 text-red-500"
+            aria-hidden="true"
+            {...props}
+          />
+        ),
+        label: 'Uso comercial',
+      },
+      {
+        label: 'Peso: 12,0 kg',
+      },
+      {
+        label: 'Armazenamento: 2,0 litros',
+      },
+      {
+        label: 'Dimensões: 39,5x30,5x37,0 cm',
+      },
+      {
+        label: 'Temperatura média da saída de água: 8ºC',
+      },
+      {
+        label: 'Capacidade de refrigeração: 0,925 l/h',
+      },
+      {
+        label: 'Consumo: 5,460 kwh/mês',
+      },
+      {
+        label: 'Potência: 100w',
+      },
+    ],
+    images: [
+      'p-slim-white.webp',
+      'p-slim-red.webp',
+      'p-slim-black.webp',
+      'p-slim-gray.webp',
+    ],
   },
   {
     name: 'Purificador de água Soft PLUS',
-    refrigerator: true,
-    comercial: true,
     src: pPlusGray,
     src2: cores4,
     href: 'https://www.softpurificadores.com.br/purificadores/soft-plus/',
-    weight: '13,5 Kg',
     cta: CTA_WA_MESSAGES.products5,
-    capacity: '2 Litros',
+    items: [
+      {
+        icon: props => (
+          <XIcon
+            className="h-6 w-6 text-red-500"
+            aria-hidden="true"
+            {...props}
+          />
+        ),
+        label: 'Água gelada',
+      },
+      {
+        icon: props => (
+          <XIcon
+            className="h-6 w-6 text-red-500"
+            aria-hidden="true"
+            {...props}
+          />
+        ),
+        label: 'Uso comercial',
+      },
+      {
+        label: 'Peso: 13,5 kg',
+      },
+      {
+        label: 'Armazenamento: 2,0 litros',
+      },
+      {
+        label: 'Dimensões: 39,5x30,5x37,0 cm',
+      },
+      {
+        label: 'Temperatura média da saída de água: 8ºC',
+      },
+      {
+        label: 'Capacidade de refrigeração: 1,895 l/h',
+      },
+      {
+        label: 'Consumo: 6,450 kwh/mês',
+      },
+      {
+        label: 'Potência: 140w',
+      },
+    ],
+    images: [
+      'p-slim-white.webp',
+      'p-slim-red.webp',
+      'p-slim-black.webp',
+      'p-slim-gray.webp',
+    ],
   },
 ]
 
-const ProductCard = ({
-  name,
-  refrigerator,
-  comercial,
-  src,
-  src2,
-  href,
-  capacity,
-  weight,
-  cta,
-}) => {
-  return (
-    <div className="flex justify-center items-center px-4 md:px-16 mt-4">
-      <div className="flex flex-col md:flex-row p-4 md:p-0 items-center bg-white shadow-xl rounded-xl w-full h-auto">
-        <div className="flex items-center justify-center">
-          <img className="h-40 w-40 rounded-xl" src={src} />
-          <img className="h-20" src={src2} />
-        </div>
-        <div className="pl-8 flex flex-col items-center">
-          <a
-            // href={href}
-            className="text-lg text-gray-800 hover:text-blue-400 cursor-pointer font-bold"
-            target="_blank"
-            rel="noreferrer"
-          >
-            {name}
-          </a>
-          {/* <ul className="flex">
-            <li>
-              <span className="mt-0 text-medium ml-1 text-gray-500 flex items-center">
-                {refrigerator ? (
-                  <CheckIcon
-                    className="h-6 w-6 text-green-500"
-                    aria-hidden="true"
-                  />
-                ) : (
-                  <XIcon className="h-6 w-6 text-red-500" aria-hidden="true" />
-                )}
-                Refrigeração
-              </span>
-            </li>
-            <li>
-              <span className="mt-0 text-medium ml-1 text-gray-500 flex items-center">
-                {comercial ? (
-                  <CheckIcon
-                    className="h-6 w-6 text-green-500"
-                    aria-hidden="true"
-                  />
-                ) : (
-                  <XIcon className="h-6 w-6 text-red-500" aria-hidden="true" />
-                )}
-                Empresa
-              </span>
-            </li>
-            <li>
-              <span className="mt-0 text-medium ml-1 text-gray-500 flex items-center">
-                {capacity ? (
-                  <>
-                    <CheckIcon
-                      className="h-6 w-6 text-green-500"
-                      aria-hidden="true"
-                    />
-                    <span>{capacity}</span>
-                  </>
-                ) : (
-                  <>
-                    <XIcon
-                      className="h-6 w-6 text-red-500"
-                      aria-hidden="true"
-                    />
-                    0 Litros
-                  </>
-                )}
-              </span>
-            </li>
-          </ul>
-          <ul className="flex">
-            <li>
-              <span className="mt-0 text-medium ml-1 text-gray-500 flex items-center">
-                <CheckIcon
-                  className="h-6 w-6 text-green-500"
-                  aria-hidden="true"
-                />
-                {weight}
-              </span>
-            </li>
-            <li>
-              <span className="mt-0 text-medium ml-1 text-gray-500 flex items-center">
-                <CheckIcon
-                  className="h-6 w-6 text-green-500"
-                  aria-hidden="true"
-                />
-                28,0 X 19,5 X 18,5 cm
-              </span>
-            </li>
-          </ul> */}
-          <div className="flex">
-            <a
-              href={getWhatsUrl(cta)}
-              className="mt-2 rounded-md shadow-md bg-blue-500 hover:bg-blue-600 px-4 py-2 text-white"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Eu quero esse
-            </a>
-            <a
-              href="https://www.softpurificadores.com.br/institucional/comparador"
-              className="mt-2 ml-2 rounded-md shadow-md bg-blue-100 hover:bg-blue-200 px-4 py-2 text-blue-600"
-              target="_blank"
-              rel="noreferrer"
-            >
-              + Detalhes
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  )
-}
-
 const FeatureSection = props => {
+  const [collapsedIndex, setCollapsedIndex] = useState(-1)
   return (
     <div className="py-16 bg-gray-50 overflow-hidden lg:py-24" {...props}>
       <div className="relative max-w-xl mx-auto px-4 sm:px-6 lg:px-8 lg:max-w-7xl">
@@ -294,14 +438,6 @@ const FeatureSection = props => {
               rel="noreferrer"
             >
               Soft Everest
-            </a>{' '}
-            e{' '}
-            <a
-              className="underline text-blue-400"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Filtrali
             </a>
             .
           </p>
@@ -327,7 +463,7 @@ const FeatureSection = props => {
               Porque investir em um filtro central de água?
             </h3>
             <div className="mt-8">
-              {transferFeatures.map(item => (
+              {filterFeatures.map(item => (
                 <div key={item.id} className="flex mt-8">
                   <div className="flex">
                     <item.icon
@@ -449,7 +585,7 @@ const FeatureSection = props => {
                 Porque investir em um purificador de água?
               </h3>
               <dl className="mt-10 space-y-10">
-                {communicationFeatures.map(item => (
+                {purifiersFeatures.map(item => (
                   <div key={item.id} className="flex mt-4">
                     <div className="flex">
                       <item.icon
@@ -466,8 +602,19 @@ const FeatureSection = props => {
             </div>
 
             <div className="mt-10 -mx-4 relative lg:mt-0 lg:col-start-1">
-              {products.map(p => (
-                <ProductCard key={p.name} {...p} />
+              {purifiers.map((p, index) => (
+                <ProductCard
+                  key={p.name}
+                  onClickDetails={() => {
+                    if (collapsedIndex === index) {
+                      setCollapsedIndex(-1)
+                    } else {
+                      setCollapsedIndex(index)
+                    }
+                  }}
+                  collapsed={collapsedIndex === index}
+                  {...p}
+                />
               ))}
             </div>
           </div>
