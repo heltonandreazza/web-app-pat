@@ -3,11 +3,6 @@ import React, { useState } from 'react'
 import cores3 from '../../images/cores3.png'
 import cores4 from '../../images/cores4.png'
 import filtroCentral from '../../images/filtroCentral.png'
-import pBabyWhite from '../../images/p-baby-white.webp'
-import pFitGray from '../../images/p-fit-gray.webp'
-import pPlusGray from '../../images/p-plus-gray.webp'
-import pSlimRed from '../../images/p-slim-red.webp'
-import pStarBlack from '../../images/p-star-black.webp'
 import { getWhatsUrl } from '../../utils'
 import { CTA_WA_MESSAGES } from '../../utils/constants'
 import ProductCard from '../ProductCard'
@@ -69,79 +64,32 @@ const purifiers = [
     items: [
       {
         icon: props => (
-          <XIcon
-            className="h-6 w-6 text-red-500"
+          <CheckIcon
+            className="h-6 w-6 text-green-500"
             aria-hidden="true"
             {...props}
           />
         ),
-        label: 'Água gelada',
+        label: 'Água natural',
       },
       {
         icon: props => (
-          <XIcon
-            className="h-6 w-6 text-red-500"
+          <CheckIcon
+            className="h-6 w-6 text-green-500"
             aria-hidden="true"
             {...props}
           />
         ),
-        label: 'Uso comercial',
+        label: 'Uso exclusivamente Residencial',
+      },
+      {
+        label: 'Modelo: Slim',
+      },
+      {
+        label: 'Dimensões: 28,0x19,5x18,5 (A-L-P)',
       },
       {
         label: 'Peso: 1,75 kg',
-      },
-      {
-        icon: props => (
-          <XIcon
-            className="h-6 w-6 text-red-500"
-            aria-hidden="true"
-            {...props}
-          />
-        ),
-        label: 'Armazenamento',
-      },
-      {
-        label: 'Dimensões: 28,0x19,5x18,5 cm',
-      },
-      {
-        icon: props => (
-          <XIcon
-            className="h-6 w-6 text-red-500"
-            aria-hidden="true"
-            {...props}
-          />
-        ),
-        label: 'Temperatura média da saída de água',
-      },
-      {
-        icon: props => (
-          <XIcon
-            className="h-6 w-6 text-red-500"
-            aria-hidden="true"
-            {...props}
-          />
-        ),
-        label: 'Capacidade de refrigeração',
-      },
-      {
-        icon: props => (
-          <XIcon
-            className="h-6 w-6 text-red-500"
-            aria-hidden="true"
-            {...props}
-          />
-        ),
-        label: 'Consumo de energia',
-      },
-      {
-        icon: props => (
-          <XIcon
-            className="h-6 w-6 text-red-500"
-            aria-hidden="true"
-            {...props}
-          />
-        ),
-        label: 'Potência',
       },
     ],
     images: [
@@ -169,34 +117,28 @@ const purifiers = [
       },
       {
         icon: props => (
-          <XIcon
-            className="h-6 w-6 text-red-500"
+          <CheckIcon
+            className="h-6 w-6 text-green-500"
             aria-hidden="true"
             {...props}
           />
         ),
-        label: 'Uso comercial',
+        label: 'Uso Residencial e Comercial',
+      },
+      {
+        label: 'Modelo: Fit',
+      },
+      {
+        label: 'Dimensões: 28,0x30,5x37,0 (A-L-P)',
       },
       {
         label: 'Peso: 10,5 kg',
       },
       {
-        label: 'Armazenamento: 1,2 litros',
+        label: 'Armazenamento de água gelada: 1,2 litros',
       },
       {
-        label: 'Dimensões: 28,0x30,5x37,0 cm',
-      },
-      {
-        label: 'Temperatura média da saída de água: 8ºC',
-      },
-      {
-        label: 'Capacidade de refrigeração: 1,303 l/h',
-      },
-      {
-        label: 'Consumo: 4,950 kwh/mês',
-      },
-      {
-        label: 'Potência: 100w',
+        label: 'Água gelada suficiente para atender 15 pessoas',
       },
     ],
     images: [
@@ -224,34 +166,28 @@ const purifiers = [
       },
       {
         icon: props => (
-          <XIcon
-            className="h-6 w-6 text-red-500"
+          <CheckIcon
+            className="h-6 w-6 text-green-500"
             aria-hidden="true"
             {...props}
           />
         ),
-        label: 'Uso comercial',
+        label: 'Uso Residencial e Comercial',
+      },
+      {
+        label: 'Modelo: Slim',
+      },
+      {
+        label: 'Dimensões: 36,0x27,5x37,0 (A-L-P)',
       },
       {
         label: 'Peso: 11,0 kg',
       },
       {
-        label: 'Armazenamento: 1,8 litros',
+        label: 'Armazenamento de água gelada: 1,8 litros',
       },
       {
-        label: 'Dimensões: 36,0x27,5x37,0 cm',
-      },
-      {
-        label: 'Temperatura média da saída de água: 8ºC',
-      },
-      {
-        label: 'Capacidade de refrigeração: 1,000 l/h',
-      },
-      {
-        label: 'Consumo: 5,100 kwh/mês',
-      },
-      {
-        label: 'Potência: 100w',
+        label: 'Água gelada suficiente para atender 15 pessoas',
       },
     ],
     images: [
@@ -280,34 +216,28 @@ const purifiers = [
       },
       {
         icon: props => (
-          <XIcon
-            className="h-6 w-6 text-red-500"
+          <CheckIcon
+            className="h-6 w-6 text-green-500"
             aria-hidden="true"
             {...props}
           />
         ),
-        label: 'Uso comercial',
+        label: 'Uso Residencial e Comercial',
+      },
+      {
+        label: 'Modelo: Star',
+      },
+      {
+        label: 'Dimensões: 39,5x30,5x37,0 (A-L-P)',
       },
       {
         label: 'Peso: 12,0 kg',
       },
       {
-        label: 'Armazenamento: 2,0 litros',
+        label: 'Armazenamento de água gelada: 2,0 litros',
       },
       {
-        label: 'Dimensões: 39,5x30,5x37,0 cm',
-      },
-      {
-        label: 'Temperatura média da saída de água: 8ºC',
-      },
-      {
-        label: 'Capacidade de refrigeração: 0,925 l/h',
-      },
-      {
-        label: 'Consumo: 5,460 kwh/mês',
-      },
-      {
-        label: 'Potência: 100w',
+        label: 'Água gelada suficiente para atender 15 pessoas',
       },
     ],
     images: [
@@ -325,8 +255,8 @@ const purifiers = [
     items: [
       {
         icon: props => (
-          <XIcon
-            className="h-6 w-6 text-red-500"
+          <CheckIcon
+            className="h-6 w-6 text-green-500"
             aria-hidden="true"
             {...props}
           />
@@ -335,34 +265,28 @@ const purifiers = [
       },
       {
         icon: props => (
-          <XIcon
-            className="h-6 w-6 text-red-500"
+          <CheckIcon
+            className="h-6 w-6 text-green-500"
             aria-hidden="true"
             {...props}
           />
         ),
-        label: 'Uso comercial',
+        label: 'Uso exclusivamente Comercial',
       },
       {
-        label: 'Peso: 13,5 kg',
-      },
-      {
-        label: 'Armazenamento: 2,0 litros',
+        label: 'Modelo: Plus',
       },
       {
         label: 'Dimensões: 39,5x30,5x37,0 cm',
       },
       {
-        label: 'Temperatura média da saída de água: 8ºC',
+        label: 'Peso: 13,5 kg',
       },
       {
-        label: 'Capacidade de refrigeração: 1,895 l/h',
+        label: 'Armazenamento de água gelada: 2,0 litros',
       },
       {
-        label: 'Consumo: 6,450 kwh/mês',
-      },
-      {
-        label: 'Potência: 140w',
+        label: 'Água gelada suficiente para atender 30 pessoas',
       },
     ],
     images: [

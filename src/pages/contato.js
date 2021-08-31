@@ -8,7 +8,16 @@ const Index = () => {
     <div>
       <main>
         <Contact />
-        <Footer />
+        <Footer
+          navigation={[
+            { name: 'Clientes', href: '/#clients' },
+            { name: 'Serviços', href: '/#services' },
+            { name: 'Filtros', href: '/#filters' },
+            { name: 'Purificadores', href: '/#purifiers' },
+            { name: 'FAQ', href: '/#faq' },
+            { name: 'Contato', href: '/#contato' },
+          ]}
+        />
       </main>
     </div>
   )

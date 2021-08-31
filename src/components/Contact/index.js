@@ -1,14 +1,17 @@
 import React, { useState } from 'react'
-import { Switch } from '@headlessui/react'
 import { getWhatsUrl } from '../../utils'
 import { CTA_WA_MESSAGES } from '../../utils/constants'
 
-function classNames(...classes) {
-  return classes.filter(Boolean).join(' ')
-}
-
 export default function Example() {
-  const [agreed, setAgreed] = useState(false)
+  const [nome, setNome] = useState('')
+  const [empresa, setEmpresa] = useState('')
+  const [email, setEmail] = useState('')
+  const [telefone, setTelefone] = useState('')
+  const [mensagem, setMensagem] = useState('')
+
+  function allFields() {
+    return nome && email && telefone && mensagem
+  }
 
   return (
     <div className="bg-white py-16 px-4 overflow-hidden sm:px-6 lg:px-8 lg:py-24">
@@ -30,14 +33,11 @@ export default function Example() {
               height={20}
               patternUnits="userSpaceOnUse"
             >
-              <rect
-                x={0}
-                y={0}
-                width={4}
-                height={4}
-                className="text-gray-200"
-                fill="currentColor"
-              />
+              x={0}
+              y={0}
+              width={4}
+              height={4}
+              className="text-gray-200" fill="currentColor" />
             </pattern>
           </defs>
           <rect
@@ -99,22 +99,18 @@ export default function Example() {
           </p>
         </div>
         <div className="mt-12">
-          <form action="#" method="POST" className="grid grid-cols-1 gap-y-6">
+          <div className="grid grid-cols-1 gap-y-6">
             <div>
-              <label
-                htmlFor="first-name"
-                className="block text-sm font-medium text-gray-700"
-              >
+              <label className="block text-sm font-medium text-gray-700">
                 Nome
               </label>
               <div className="mt-1">
                 <input
                   type="text"
-                  name="first-name"
-                  id="first-name"
                   autoComplete="given-name"
                   className="py-3 px-4 block w-full shadow-sm focus:ring-blue-500 focus:border-blue-500 border-gray-300 rounded-md"
                   placeholder="digite seu nome e sobrenome"
+                  onChange={event => setNome(event.target.value)}
                 />
               </div>
             </div>
@@ -123,7 +119,7 @@ export default function Example() {
                 htmlFor="Empresa"
                 className="block text-sm font-medium text-gray-700"
               >
-                Company
+                Empresa (opcional)
               </label>
               <div className="mt-1">
                 <input
@@ -133,6 +129,7 @@ export default function Example() {
                   autoComplete="organization"
                   className="py-3 px-4 block w-full shadow-sm focus:ring-blue-500 focus:border-blue-500 border-gray-300 rounded-md"
                   placeholder="digite o nome da sua empresa"
+                  onChange={event => setEmpresa(event.target.value)}
                 />
               </div>
             </div>
@@ -151,6 +148,7 @@ export default function Example() {
                   autoComplete="email"
                   className="py-3 px-4 block w-full shadow-sm focus:ring-blue-500 focus:border-blue-500 border-gray-300 rounded-md"
                   placeholder="digite seu email"
+                  onChange={event => setEmail(event.target.value)}
                 />
               </div>
             </div>
@@ -169,6 +167,7 @@ export default function Example() {
                   autoComplete="tel"
                   className="py-3 px-4 block w-full focus:ring-blue-500 focus:border-blue-500 border-gray-300 rounded-md"
                   placeholder="(47) 98877-6655"
+                  onChange={event => setTelefone(event.target.value)}
                 />
               </div>
             </div>
@@ -186,54 +185,33 @@ export default function Example() {
                   rows={4}
                   className="py-3 px-4 block w-full shadow-sm focus:ring-blue-500 focus:border-blue-500 border border-gray-300 rounded-md"
                   defaultValue={''}
+                  onChange={event => setMensagem(event.target.value)}
                 />
               </div>
             </div>
             <div className="sm:col-span-2">
-              <div className="flex items-start">
-                <div className="flex-shrink-0">
-                  <Switch
-                    checked={agreed}
-                    onChange={setAgreed}
-                    className={classNames(
-                      agreed ? 'bg-blue-600' : 'bg-gray-200',
-                      'relative inline-flex flex-shrink-0 h-6 w-11 border-2 border-transparent rounded-full cursor-pointer transition-colors ease-in-out duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500',
-                    )}
-                  >
-                    <span className="sr-only">Agree to policies</span>
-                    <span
-                      aria-hidden="true"
-                      className={classNames(
-                        agreed ? 'translate-x-5' : 'translate-x-0',
-                        'inline-block h-5 w-5 rounded-full bg-white shadow transform ring-0 transition ease-in-out duration-200',
-                      )}
-                    />
-                  </Switch>
-                </div>
-                <div className="ml-3">
-                  <p className="text-base text-gray-500">
-                    Ao selecionar essa opção, você concorda com as{' '}
-                    <a href="#" className="font-medium text-gray-700 underline">
-                      Políticas de cookies e privacidade
-                    </a>
-                    .
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className="sm:col-span-2">
               <button
-                type="submit"
-                className={`w-full inline-flex items-center justify-center px-6 py-3 border border-transparent rounded-md shadow-sm text-base font-medium text-white ${
-                  agreed
-                    ? 'bg-blue-600 hover:bg-blue-700 cursor-pointer'
-                    : 'bg-gray-600 hover:bg-gray-600 cursor-not-allowed'
-                } focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500`}
+                className={`w-full inline-flex items-center justify-center px-6 py-3 border border-transparent rounded-md shadow-sm text-base font-medium text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500
+                  ${
+                    allFields()
+                      ? 'bg-blue-500 hover:bg-blue-700 cursor-pointer'
+                      : 'bg-gray-500 hover:bg-gray-700 cursor-not-allowed'
+                  }`}
+                onClick={() => {
+                  if (allFields()) {
+                    const subject = 'Contato via site'
+                    const body = `nome:${nome}%0Atelefone: ${telefone}%0Aemail: ${email}%0Aempresa: ${empresa}%0Amensagem:${mensagem}`
+
+                    open(
+                      `mailto:purificadorespuribrastimbo@gmail.com?subject=${subject}&body=${body}`,
+                    )
+                  }
+                }}
               >
                 Enviar
               </button>
             </div>
-          </form>
+          </div>
         </div>
       </div>
     </div>

@@ -1,6 +1,7 @@
 import React from 'react'
 import { getWhatsUrl } from '../../utils'
 import Slider from '../Slider'
+import useMediaQuery from '@material-ui/core/useMediaQuery'
 
 const ProductCard = ({
   name,
@@ -20,6 +21,8 @@ const ProductCard = ({
   srcClassName,
   children,
 }) => {
+  const isNotMobile = useMediaQuery('(min-width:640px)')
+  console.log('isNotMobile', isNotMobile)
   return (
     <div className="flex items-center px-4 md:px-16 mt-4">
       <div className="flex flex-col p-4 md:p-0 bg-white shadow-xl rounded-xl w-full h-auto">
@@ -82,15 +85,15 @@ const ProductCard = ({
           }
           style={{
             transition: 'height 500ms',
-            height: collapsed ? '10rem' : '0rem',
+            height: collapsed ? (isNotMobile ? '10rem' : '20rem') : '0rem',
           }}
         >
           {collapsed && (
-            <div className="py-2 md:py-0 px-2">
-              <ul className="flex flex-col md:flex-row flex-wrap items-center justify-center">
+            <div className="pt-8 px-0 md:py-0 px-2">
+              <ul className="flex flex-col md:flex-row flex-wrap md:items-center justify-center">
                 {items?.map(item => (
                   <li key={item.label}>
-                    <span className="text-medium mx-4 my-0.5 text-gray-500 flex items-center">
+                    <span className="text-medium mx-2 md:mx-4 my-0.5 text-gray-500 flex items-center">
                       {item.icon && <item.icon />}
                       {item.label}
                     </span>

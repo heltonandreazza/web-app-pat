@@ -4,30 +4,29 @@ import { URLS } from '../../utils/constants'
 import { IconFB, IconInsta } from '../Icon'
 import AnchorLink from 'react-anchor-link-smooth-scroll'
 
-const navigation = {
-  main: [
-    { name: 'Clientes', href: '#clients' },
-    { name: 'Serviços', href: '#services' },
-    { name: 'Filtros', href: '#filters' },
-    { name: 'Purificadores', href: '#purifiers' },
-    { name: 'FAQ', href: '#faq' },
-    { name: 'Contato', href: '/contato' },
-  ],
-  social: [
-    {
-      name: 'Facebook',
-      href: URLS.facebook,
-      icon: props => <IconFB {...props} />,
-    },
-    {
-      name: 'Instagram',
-      href: URLS.instagram,
-      icon: props => <IconInsta {...props} />,
-    },
-  ],
-}
+const DEFAULT_NAVIGATION = [
+  { name: 'Clientes', href: '#clients' },
+  { name: 'Serviços', href: '#services' },
+  { name: 'Filtros', href: '#filters' },
+  { name: 'Purificadores', href: '#purifiers' },
+  { name: 'FAQ', href: '#faq' },
+  { name: 'Contato', href: '/contato' },
+]
 
-const Footer = () => {
+const SOCIAL = [
+  {
+    name: 'Facebook',
+    href: URLS.facebook,
+    icon: props => <IconFB {...props} />,
+  },
+  {
+    name: 'Instagram',
+    href: URLS.instagram,
+    icon: props => <IconInsta {...props} />,
+  },
+]
+
+const Footer = ({ navigation = DEFAULT_NAVIGATION }) => {
   return (
     <footer className="bg-white">
       <div className="max-w-7xl mx-auto py-12 px-4 overflow-hidden sm:px-6 lg:px-8">
@@ -35,19 +34,28 @@ const Footer = () => {
           className="-mx-5 -my-2 flex flex-wrap justify-center"
           aria-label="Footer"
         >
-          {navigation.main.map(item => (
+          {navigation.map(item => (
             <div key={item.name} className="px-5 py-2">
-              <AnchorLink
-                href={item.href}
-                className="text-base text-gray-500 hover:text-gray-900"
-              >
-                {item.name}
-              </AnchorLink>
+              {item.href?.includes('/') ? (
+                <a
+                  href={item.href}
+                  className="text-base text-gray-500 hover:text-gray-900"
+                >
+                  {item.name}
+                </a>
+              ) : (
+                <AnchorLink
+                  href={item.href}
+                  className="text-base text-gray-500 hover:text-gray-900"
+                >
+                  {item.name}
+                </AnchorLink>
+              )}
             </div>
           ))}
         </nav>
         <div className="mt-8 flex justify-center space-x-6">
-          {navigation.social.map(item => (
+          {SOCIAL.map(item => (
             <a
               key={item.name}
               href={item.href}
