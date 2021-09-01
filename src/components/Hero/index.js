@@ -29,27 +29,14 @@ const Hero = () => {
 
           <Navigator />
 
-          <main className="mt-10 mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28">
+          <main className="mt-10 mx-auto max-w-7xl px-4 sm:mt-12 sm:px-0 md:mt-16 lg:mt-20 lg:px-0 xl:mt-28">
             <div className="sm:text-center lg:text-left">
-              <h1 className="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
+              <h1 className="text-2xl tracking-tight font-extrabold text-gray-900 sm:text-5xl">
                 <span className="block">Purificadores de Água Timbó</span>
-                <span className="block text-blue-600 md:text-5xl">
+                <span className="block text-blue-600 text-2xl mt-4 md:text-5xl">
                   Levamos qualidade de vida até você, através da água filtrada.
                 </span>
               </h1>
-              {/* <p className="mt-3 text-base font-bold text-gray-800 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
-                Venda, Instalação e Manutenção de Filtros e Purificadores de
-                Água. Representante{' '}
-                <a
-                  href="https://www.puribras.com.br/home#"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="underline text-blue-400"
-                >
-                  PURIBRAS
-                </a>{' '}
-                em SC.
-              </p> */}
               <p className="mt-3 text-base text-gray-500 sm:mt-3 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-3 md:text-xl lg:mx-0">
                 Já imaginou sua vida sem{' '}
                 <span className="text-blue-700 font-medium">água potável</span>?

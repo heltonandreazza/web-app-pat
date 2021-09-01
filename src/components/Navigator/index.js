@@ -4,6 +4,7 @@ import React, { Fragment } from 'react'
 import AnchorLink from 'react-anchor-link-smooth-scroll'
 import { URLS } from '../../utils/constants'
 import { IconFB, IconInsta } from '../Icon'
+import logo from '../../images/logo.png'
 const navigation = [
   { name: 'Clientes', href: '#clientes' },
   { name: 'Serviços', href: '#servicos' },
@@ -15,7 +16,7 @@ const navigation = [
 
 const Navigator = () => (
   <Popover>
-    <div className="relative pt-6 px-4 sm:px-6 lg:px-8">
+    <div className="relative pt-10 px-4 sm:px-6 lg:px-0">
       <nav
         className="relative flex items-center justify-between sm:h-10 lg:justify-start"
         aria-label="Global"
@@ -23,11 +24,8 @@ const Navigator = () => (
         <div className="flex items-center flex-grow flex-shrink-0 lg:flex-grow-0">
           <div className="flex items-center justify-between w-full md:w-auto">
             <a href="/">
-              <span className="sr-only">Workflow</span>
-              <img
-                className="h-8 w-auto sm:h-10"
-                src="https://tailwindui.com/img/logos/workflow-mark-blue-600.svg"
-              />
+              <span className="sr-only">Logo</span>
+              <img className="w-auto h-24" src={logo} />
             </a>
             <div className="-mr-2 flex items-center md:hidden">
               <Popover.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500">
@@ -37,13 +35,13 @@ const Navigator = () => (
             </div>
           </div>
         </div>
-        <div className="hidden md:flex items-center md:ml-10 md:pr-4 md:space-x-4">
+        <div className="hidden md:flex items-center md:ml-6 md:pr-4 md:space-x-4">
           {navigation.map(item =>
             item.anchor ? (
               <a
                 key={item.name}
                 href={item.href}
-                className="text-base font-medium text-gray-500 hover:text-gray-900"
+                className="text-base font-medium text-gray-500 hover:text-blue-700"
               >
                 {item.name}
               </a>
@@ -51,7 +49,7 @@ const Navigator = () => (
               <AnchorLink
                 key={item.name}
                 href={item.href}
-                className="text-base font-medium text-gray-500 hover:text-gray-900"
+                className="text-base font-medium text-gray-500 hover:text-blue-700"
               >
                 {item.name}
               </AnchorLink>
@@ -97,11 +95,7 @@ const Navigator = () => (
         <div className="rounded-lg shadow-md bg-white ring-1 ring-black ring-opacity-5 overflow-hidden">
           <div className="px-5 pt-4 flex items-center justify-between">
             <div>
-              <img
-                className="h-8 w-auto"
-                src="https://tailwindui.com/img/logos/workflow-mark-blue-600.svg"
-                alt=""
-              />
+              <img className="h-8 w-auto" src={logo} alt="" />
             </div>
             <div className="-mr-2">
               <Popover.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500">
