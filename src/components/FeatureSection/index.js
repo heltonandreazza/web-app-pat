@@ -11,19 +11,31 @@ const filterFeatures = [
   {
     id: 1,
     description:
-      "Porque ele vai filtrar a água antes dela ir pra sua caixa, levando assim água limpa em todos os pontos de uso. Além de manter a caixa d'água e as tubulações limpas.",
+      'Porque ele vai filtrar a água antes dela ir para a caixa levando assim água limpa em todos os pontos de uso (torneiras, chuveiros, máquinas de lavar roupas e louças...)',
     icon: LightningBoltIcon,
   },
   {
     id: 2,
     description:
-      'Porque ele tem carvão ativado que tira o gosto ruim e os odores da água.',
+      'Porque ele vai manter a caixa d’água e as tubulações limpas por mais tempo.',
     icon: LightningBoltIcon,
   },
   {
     id: 3,
     description:
-      'Porque as camadas de cristais de quartzo retém sedimentos como areia, barro, lodo, evitando o entupimento da sua máquina de lavar, chuveiro e torneiras.',
+      'Porque ele tem carvão ativado que tira o gosto ruim e os odores da água.',
+    icon: LightningBoltIcon,
+  },
+  {
+    id: 4,
+    description:
+      'Porque as camadas de cristais de quartzo (carga filtrante) retém sedimentos como areia, barro e lodo evitando o entupimento das torneiras e demais pontos de água.',
+    icon: LightningBoltIcon,
+  },
+  {
+    id: 5,
+    description:
+      'Porque usamos a água da torneira para escovar os dentes, fazer comida, fazer sucos, chás e cafés e tomar banho e nossos pets bebem dessa água.',
     icon: LightningBoltIcon,
   },
 ]
@@ -32,25 +44,19 @@ const purifiersFeatures = [
   {
     id: 1,
     description:
-      'A primeira vantagem é a da filtragem, retirando pequenas partículas e substâncias da água (como ferrugem, areia e barro).',
+      'Com o purificador você tem água gelada e filtrada a hora que quiser, não precisa mais encher a garrafinha de água e colocar na geladeira.',
     icon: LightningBoltIcon,
   },
   {
     id: 2,
     description:
-      'A segunda é a esterilização, os purificadores eliminam micro-organismos, como fungos, vírus, micróbios e bactérias.',
+      'O purificador Soft Everest possui refil com carvão ativado que reduz o cloro da água, eliminando aquele gosto ruim da água da rede pública.',
     icon: LightningBoltIcon,
   },
   {
     id: 3,
     description:
-      'A terceira é a capacidade de absorção, expelindo cloro e metais nocivos.',
-    icon: LightningBoltIcon,
-  },
-  {
-    id: 4,
-    description:
-      'Por fim, não precisar gastar comprando galões e garrafas de água nem carregá-los de um lado para outro, porque os purificadores são ligados diretamente na rede de água.',
+      'Você economiza na compra de bombona de água, pois o purificador é um investimento que se paga a médio prazo, dependendo da quantidade de água consumida.',
     icon: LightningBoltIcon,
   },
 ]
@@ -386,20 +392,20 @@ const FeatureSection = props => {
         >
           <div className="flex flex-col">
             <h3 className="text-2xl font-extrabold text-gray-900 tracking-tight sm:text-3xl">
-              Filtro Central de água
+              Filtro Central de Água
             </h3>
-            <p className="mt-3 text-lg text-gray-500">
-              O filtro central é um dispositivo que retém partículas de resíduos
-              e de impurezas presentes na água que vem da rua. Com ele, você
-              terá mais segurança, higiene e saúde, com água de melhor qualidade
-              em todos os pontos de uso da sua casa, estabelecimento ou
-              indústria.
+            <p className="mt-3 text-lg text-gray-600">
+              É um equipamento que retém impurezas e partículas de resíduos
+              presentes na água que chega nas torneiras da sua casa ou empresa.
+              Seja água da rede pública ou de poços e nascentes. Com o filtro
+              você terá mais segurança em consumir a água e consequentemente
+              mais qualidade de vida e saúde para toda a sua família.
             </p>
 
             <h3 className="mt-10 text-2xl font-extrabold text-gray-900 tracking-tight sm:text-2xl">
-              Porque investir em um filtro central de água?
+              Por que investir em um filtro central de água?
             </h3>
-            <div className="mt-8">
+            <div>
               {filterFeatures.map(item => (
                 <div key={item.id} className="flex mt-8">
                   <div className="flex">
@@ -409,10 +415,35 @@ const FeatureSection = props => {
                     />
                   </div>
                   <div className="text-base text-gray-500 ml-4">
-                    {item.description}
+                    <p>{item.description}</p>
                   </div>
                 </div>
               ))}
+            </div>
+            <h3 className="mt-10 text-2xl font-extrabold text-gray-900 tracking-tight sm:text-2xl">
+              Você sabia que a água de poço ou nascente pode estar contaminada
+              por metais pesados?
+            </h3>
+            <div>
+              <div className="flex mt-8">
+                <div className="text-base text-gray-500">
+                  <p>
+                    Infelizmente é possível que a água do seu poço ou nascente
+                    esteja contaminada com metais pesados, dentre eles, o ferro
+                    e o manganês. A abundância de ferro é armazenada em órgãos
+                    como fígado, coração e pâncreas, onde passa longos períodos
+                    despercebido até ocasionar doenças hepáticas graves que só
+                    podem ser curadas logo no início dos sintomas, infelizmente
+                    isso não acontece na maioria das vezes. Grandes quantidades
+                    de ferro no organismo também podem piorar os efeitos do mau
+                    colesterol e aumentar os riscos de doenças cardíacas. Mas o
+                    problema tem solução. A água de poço ou nascente pode ser
+                    tratada para ficar potável através da filtragem. A solução é
+                    personalizada de acordo com uma análise físico-química da
+                    água.
+                  </p>
+                </div>
+              </div>
               <div className="flex">
                 <a
                   href={getWhatsUrl(CTA_WA_MESSAGES.products0)}
@@ -509,11 +540,6 @@ const FeatureSection = props => {
                 </ProductCard>
               ))}
             </div>
-            {/* <img
-              className="relative mx-auto h-80 md:h-sm"
-              src={filtroCentral}
-              alt=""
-            /> */}
           </div>
         </div>
 
@@ -554,23 +580,36 @@ const FeatureSection = props => {
           <div className="lg:grid lg:grid-flow-row-dense lg:grid-cols-2 lg:gap-0 lg:items-center">
             <div className="lg:col-start-2 lg:px-8">
               <h3 className="text-2xl font-extrabold text-gray-900 tracking-tight sm:text-3xl">
-                Purificadores de água Soft Everest
+                Purificadores de água{' '}
+                <span className="text-blue-700">Soft Everest</span>
               </h3>
-              <p className="mt-3 text-lg text-gray-500">
-                O purificador de água Soft Everest possui filtro de alta
-                eficiência e dupla filtração. Garante redução de cloro,
-                oferecendo água livre de partículas, bico e pingadeira
-                removíveis que facilitam a limpeza e o abastecimento de
-                recipientes maiores. Tem três opções de temperatura – natural e
-                gelada e misturada (fresca). Baixo consumo de energia e alta
-                capacidade de refrigeração, porque é refrigerado por compressor.
-                Com cores e modelos variados atende ambientes comerciais e
-                residenciais. Além de ser um produto certificado pelo INMETRO e
-                com 1 ano de garantia.
+              <p className="mt-3 text-lg text-gray-600">
+                Quer um purificador que seja refrigerado por compressor e com
+                baixo consumo de energia? Então o{' '}
+                <span className="text-blue-700 font-medium">Soft Everest</span>{' '}
+                é para você!
+              </p>
+              <p className="mt-3 text-lg text-gray-600">
+                Produto certificado pelo{' '}
+                <span className="text-blue-700 font-medium">INMETRO</span> e com{' '}
+                <span className="text-blue-700 font-bold">
+                  1 ano de garantia
+                </span>{' '}
+                o purificador de água{' '}
+                <span className="text-blue-700 font-medium">Soft Everest</span>{' '}
+                possui filtro de alta eficiência e dupla filtração. Reduz o
+                cloro e retém as partículas da água. Suas partes como o bico e a
+                pingadeira são removíveis para facilitar a limpeza e o
+                abastecimento de recipientes maiores. Possui três opções de
+                temperatura da água,{' '}
+                <span className="text-blue-300 font-medium">natural</span>,{' '}
+                <span className="text-blue-700 font-medium">gelada</span> e{' '}
+                <span className="text-blue-500 font-medium">misturada</span>.
+                Atende residências e empresas.
               </p>
 
               <h3 className="mt-10 text-2xl font-extrabold text-gray-900 tracking-tight sm:text-2xl">
-                Porque investir em um purificador de água?
+                Por que investir em um purificador de água?
               </h3>
               <dl className="mt-10 space-y-10">
                 {purifiersFeatures.map(item => (

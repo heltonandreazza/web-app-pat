@@ -9,21 +9,21 @@ const supportLinks = [
     name: 'Projeto e Instalação',
     href: getWhatsUrl(CTA_WA_MESSAGES.servicesCta1),
     description:
-      'Realizamos a venda e instalação de produtos aderentes ao seu projeto, contando com especialistas da área.',
+      'Através de visita in loco e coleta de informações é possível dimensionar o aparelho ideal para a necessidade do cliente e a partir daí realizamos a venda e a instalação do produto.',
     icon: HomeIcon,
   },
   {
     name: 'Manutenção preventiva',
     href: getWhatsUrl(CTA_WA_MESSAGES.servicesCta2),
     description:
-      'Oferecemos planos de manutenção preventiva para garantir água de qualidade e equipamentos em perfeito funcionamento para a sua casa ou a sua empresa.',
+      'Oferecemos planos mensais, trimestrais, semestrais e anuais de manutenção preventiva residencial e empresarial. Visando equipamentos em perfeito funcionamento e garantindo água de qualidade, seja para consumo humano ou para o processo produtivo da sua empresa.',
     icon: CogIcon,
   },
   {
     name: 'Análise e Tratamento de Água',
     href: getWhatsUrl(CTA_WA_MESSAGES.servicesCta3),
     description:
-      'Realizamos coleta amostral de água no cliente e realizamos análise em laboratório para então escolher a melhor solução de tratamento de água ao nosso cliente.',
+      'É realizada coleta amostral da água através de laboratório especializado, e após o resultado dessa análise, indicamos o melhor tratamento para tornar a água potável.',
     icon: BeakerIcon,
   },
 ]
@@ -48,8 +48,8 @@ const Header = props => {
             Tudo sobre os serviços de instalação oferecidos.
           </p>
           <p className="mt-1 max-w-3xl text-xl text-white">
-            Serviçoes de venda, instalação e manutenção de purificadores de água
-            e filtros centrais.
+            Venda, instalação e manutenção de filtros centrais de água,
+            purificadores e bebedouros.
           </p>
         </div>
       </div>

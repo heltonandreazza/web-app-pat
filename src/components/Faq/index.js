@@ -6,38 +6,33 @@ import { CTA_WA_MESSAGES } from '../../utils/constants'
 
 const faqs = [
   {
-    question: 'O que é um filtro central?',
+    question:
+      'De onde vem o carvão ativado usado para filtragem de água e como ele age?',
     answer:
-      'O filtro central é um dispositivo que retém partículas de resíduos e de impurezas presentes na água que vem da rede pública, da nascente ou do poço. Ele te proporciona mais segurança, higiene e saúde, com água de melhor qualidade em todos os pontos de uso da sua casa, empresa, indústria ou estabelecimento.',
+      'O carvão ativado usado no tratamento da água é de origem vegetal, extraído do coco de babaçu, oriundo de uma palmeira nativa da região norte do Brasil. No tratamento de água ele cumpre a função de adsorvente. Retém em seus poros certos tipos de impurezas, partículas grandes que causam coloração, sabor ou odor indesejável na água. Essas partículas permanecem fixadas ao carvão ativado por forças físicas (aderência).',
   },
   {
-    question: 'Qual o material filtrante utilizado dentro do filtro central?',
-    answer: ' Cristais de Quartzo e Carvão ativado. ',
+    question:
+      'Qual o material filtrante utilizado dentro do filtro central para a remoção de sujeira e redução do cloro?',
+    answer:
+      'Cristais de Quartzo em granulometrias diferenciadas e carvão ativado.',
   },
   {
-    question: 'Como o filtro central funciona?',
+    question:
+      'E se o problema da minha água for contaminação por metais pesados? (ferro e manganês) o filtro central resolve?',
     answer:
-      ' O Filtro Central é instalado após o hidrômetro, sendo assim, toda a água que abastece o estabelecimento é filtrada antes de ir para caixa d’água. Usado também para águas que vêm de poços ou de bombas.',
+      'Resolve sim. Quando há incidência de contaminação por metais pesados na água, além dos cristais de quartzo em granulometrias diferenciadas, uma carga especial é adicionada ao filtro composta por um produto natural denominado greensand, que tem a função de reter e reduzir esses contaminantes da água.',
   },
-
   {
     question: 'Por que o filtro central me proporciona mais economia?',
     answer:
-      ' Porque com água filtrada em todos os pontos de uso os seus equipamentos como lavadoras, chuveiros e outras máquinas vão permanecer limpos, sem entupir e danificar. Prorrogando sua vida útil. Você vai economizar também com a limpeza da caixa d’água, que vai permanecer limpa por mais tempo. Além de consumir água limpa, que vai evitar o aparecimento de doenças.',
+      'Porque com água filtrada em todos os pontos de uso os seus equipamentos como lavadoras, chuveiros e outras máquinas vão permanecer limpos, sem entupir e danificar. Prorrogando sua vida útil. Você vai economizar também com a limpeza da caixa d’água, que vai permanecer limpa por mais tempo. Além de consumir água limpa, que vai evitar o aparecimento de doenças.',
   },
-
-  {
-    question:
-      'Quais as vantagens de investir em um purificador de água Soft Everest?',
-    answer:
-      ' O purificador de água Soft Everest possui filtro de alta eficiência e dupla filtração. Garante redução de cloro, oferecendo água livre de partículas, bico e pingadeira removíveis que facilitam a limpeza e o abastecimento de recipientes maiores. Tem três opções de temperatura – natural e gelada e misturada (fresca). Baixo consumo de energia e alta capacidade de refrigeração, porque é refrigerado por compressor. Com cores e modelos variados atende ambientes comerciais e residenciais. Produto certificado pelo INMETRO e com 1 ano de garantia.',
-  },
-
   {
     question:
       'Quando devo trocar o refil do meu purificador de água Soft Everest?',
     answer:
-      'a troca é recomendada de 09 a 12 meses de uso, dependendo da qualidade da água recebida.',
+      'Sua troca é recomendada de 09 a 12 meses de uso, dependendo da qualidade da água recebida.',
   },
 ]
 

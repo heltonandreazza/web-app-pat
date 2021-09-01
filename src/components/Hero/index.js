@@ -32,14 +32,12 @@ const Hero = () => {
           <main className="mt-10 mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28">
             <div className="sm:text-center lg:text-left">
               <h1 className="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
-                <span className="block xl:inline">
-                  Purificadores de Água Timbó.{' '}
-                </span>
-                <span className="block text-blue-600 xl:inline">
-                  Sua Fonte de Água Pura
+                <span className="block">Purificadores de Água Timbó</span>
+                <span className="block text-blue-600 md:text-5xl">
+                  Levamos qualidade de vida até você, através da água filtrada.
                 </span>
               </h1>
-              <p className="mt-3 text-base font-bold text-gray-800 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
+              {/* <p className="mt-3 text-base font-bold text-gray-800 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
                 Venda, Instalação e Manutenção de Filtros e Purificadores de
                 Água. Representante{' '}
                 <a
@@ -51,24 +49,20 @@ const Hero = () => {
                   PURIBRAS
                 </a>{' '}
                 em SC.
+              </p> */}
+              <p className="mt-3 text-base text-gray-500 sm:mt-3 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-3 md:text-xl lg:mx-0">
+                Já imaginou sua vida sem{' '}
+                <span className="text-blue-700 font-medium">água potável</span>?
+                Não né?
               </p>
               <p className="mt-3 text-base text-gray-500 sm:mt-3 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-3 md:text-xl lg:mx-0">
-                Uma{' '}
-                <span className="text-blue-700 font-medium">vida saudável</span>{' '}
-                é desejo de todos nós. Afinal, sem saúde a vida não tem o mesmo
-                significado. Mas o que é vida sem{' '}
-                <span className="text-blue-700 font-medium">água</span>?
-              </p>
-              <p className="mt-3 text-base text-gray-500 sm:mt-3 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-3 md:text-xl lg:mx-0">
-                É com essa missão que oferecemos os{' '}
+                É com esse propósito que oferecemos os{' '}
                 <span className="text-blue-700 font-medium">
                   melhores serviços e produtos
                 </span>{' '}
-                para que você tenha{' '}
-                <span className="text-blue-700 font-medium">
-                  água de alta qualidade
-                </span>
-                .
+                para você que se preocupa com a{' '}
+                <span className="text-blue-700 font-medium">qualidade</span> da
+                água que consome.
               </p>
               <div className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
                 <div className="rounded-md shadow">
