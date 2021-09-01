@@ -16,7 +16,7 @@ const navigation = [
 
 const Navigator = () => (
   <Popover>
-    <div className="relative pt-10 px-4 sm:px-6 lg:px-0">
+    <div className="relative pt-2 px-4 sm:px-0 sm:pt-10">
       <nav
         className="relative flex items-center justify-between sm:h-10 lg:justify-start"
         aria-label="Global"
