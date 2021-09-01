@@ -5,10 +5,10 @@ import AnchorLink from 'react-anchor-link-smooth-scroll'
 import { URLS } from '../../utils/constants'
 import { IconFB, IconInsta } from '../Icon'
 const navigation = [
-  { name: 'Clientes', href: '#clients' },
-  { name: 'Serviços', href: '#services' },
-  { name: 'Filtros', href: '#filters' },
-  { name: 'Purificadores', href: '#purifiers' },
+  { name: 'Clientes', href: '#clientes' },
+  { name: 'Serviços', href: '#servicos' },
+  { name: 'Filtros', href: '#filtros' },
+  { name: 'Purificadores', href: '#purificadores' },
   { name: 'FAQ', href: '#faq' },
   { name: 'Contato', href: '/contato', anchor: true },
 ]
@@ -22,7 +22,7 @@ const Navigator = () => (
       >
         <div className="flex items-center flex-grow flex-shrink-0 lg:flex-grow-0">
           <div className="flex items-center justify-between w-full md:w-auto">
-            <a href="#">
+            <a href="/">
               <span className="sr-only">Workflow</span>
               <img
                 className="h-8 w-auto sm:h-10"
@@ -40,11 +40,19 @@ const Navigator = () => (
         <div className="hidden md:flex items-center md:ml-10 md:pr-4 md:space-x-4">
           {navigation.map(item =>
             item.anchor ? (
-              <a key={item.name} href={item.href}>
+              <a
+                key={item.name}
+                href={item.href}
+                className="text-base font-medium text-gray-500 hover:text-gray-900"
+              >
                 {item.name}
               </a>
             ) : (
-              <AnchorLink key={item.name} href={item.href}>
+              <AnchorLink
+                key={item.name}
+                href={item.href}
+                className="text-base font-medium text-gray-500 hover:text-gray-900"
+              >
                 {item.name}
               </AnchorLink>
             ),

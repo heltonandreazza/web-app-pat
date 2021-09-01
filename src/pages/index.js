@@ -28,8 +28,8 @@ const Index = () => {
     <div>
       <main>
         <Hero />
-        <LogoClound id="clients" />
-        <Header id="services" />
+        <LogoClound id="clientes" />
+        <Header id="servicoes" />
         <FeatureSection />
         <CtaSection />
         <BlogSection items={instaNodes} />

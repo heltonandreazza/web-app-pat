@@ -85,13 +85,21 @@ export default function Example() {
           </h2>
           <p className="mt-4 text-lg leading-6 text-gray-500">
             Contate um de nossos consultores por e-mail,{' '}
-            <span className="text-blue-500 font-medium">
+            <a
+              href="#"
+              onClick={() =>
+                open('mailto:purificadorespuribrastimbo@gmail.com')
+              }
+              className="text-blue-500 font-medium"
+            >
               purificadorestimbo@gmail.com
-            </span>
+            </a>
             , preenchendo esse formulário ou nos contate via{' '}
             <a
               className="underline text-blue-400"
-              href={getWhatsUrl(CTA_WA_MESSAGES.ctaBanner1)}
+              href={getWhatsUrl(CTA_WA_MESSAGES.ctaContact2)}
+              target="_blank"
+              rel="noreferrer"
             >
               whatsapp
             </a>

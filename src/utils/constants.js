@@ -16,6 +16,10 @@ export const CTA_WA_MESSAGES = {
     'Olá, estive no site e gostaria de conversar sobre o serviço de Análise e Tratamento de água!',
   ctaBanner1:
     'Olá, estive no site e gostaria de falar com um consultor! Poderia me ajudar?',
+  ctaContact1:
+    'Olá, estive no site/contato e gostaria de falar com um consultor! Poderia me ajudar?',
+  ctaContact2:
+    'Olá, estive no site/contato/link e gostaria de falar com um consultor! Poderia me ajudar?',
   ctaFaq1:
     'Olá, estive no FAQ site e gostaria de tirar algumas dúvidas com um consultor! Poderia me ajudar?',
   products0:

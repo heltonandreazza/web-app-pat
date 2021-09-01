@@ -388,7 +388,7 @@ const FeatureSection = props => {
 
         <div
           className="relative mt-12 lg:mt-24 lg:grid lg:grid-cols-2 lg:gap-8 lg:items-center"
-          id="filters"
+          id="filtros"
         >
           <div className="flex flex-col">
             <h3 className="text-2xl font-extrabold text-gray-900 tracking-tight sm:text-3xl">
@@ -576,7 +576,7 @@ const FeatureSection = props => {
           />
         </svg>
 
-        <div className="relative mt-12 sm:mt-16 lg:mt-24" id="purifiers">
+        <div className="relative mt-12 sm:mt-16 lg:mt-24" id="purificadores">
           <div className="lg:grid lg:grid-flow-row-dense lg:grid-cols-2 lg:gap-0 lg:items-center">
             <div className="lg:col-start-2 lg:px-8">
               <h3 className="text-2xl font-extrabold text-gray-900 tracking-tight sm:text-3xl">
