@@ -502,7 +502,7 @@ const FeatureSection = props => {
                   }}
                   collapsed={collapsedIndex === index}
                   {...p}
-                  srcWrapperClassName="h-60 w-16 px-8 my-2 pl-16"
+                  srcWrapperClassName="h-60 w-16 px-0 my-2"
                   srcClassName="h-60 w-16 "
                 >
                   <ul className="flex">
