@@ -22,7 +22,6 @@ const ProductCard = ({
   children,
 }) => {
   const isNotMobile = useMediaQuery('(min-width:640px)')
-  console.log('isNotMobile', isNotMobile)
   return (
     <div className="flex items-center px-4 md:px-16 mt-4">
       <div className="flex flex-col p-4 md:p-0 bg-white shadow-xl rounded-xl w-full h-auto">

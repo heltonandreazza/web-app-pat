@@ -1,8 +1,10 @@
-import { CheckIcon, LightningBoltIcon, XIcon } from '@heroicons/react/outline'
+import { CheckIcon, LightningBoltIcon } from '@heroicons/react/outline'
 import React, { useState } from 'react'
 import cores3 from '../../images/cores3.png'
 import cores4 from '../../images/cores4.png'
-import filtroCentral from '../../images/filtroCentral.png'
+import filtroResidencial from '../../images/filtroResidencial.png'
+import filtroIndustrial from '../../images/filtroIndustrial.png'
+import filtroAutomatizada from '../../images/filtroAutomatizada.png'
 import { getWhatsUrl } from '../../utils'
 import { CTA_WA_MESSAGES } from '../../utils/constants'
 import ProductCard from '../ProductCard'
@@ -306,19 +308,27 @@ const purifiers = [
 
 const filters = [
   {
-    name: 'Filtro de água A',
-    src: filtroCentral,
+    name: 'Linha residencial',
+    src: filtroResidencial,
     cta: CTA_WA_MESSAGES.filter1,
+    desc: `Atende casas, condomínios e estabelecimentos que necessitam de água filtrada em todos os pontos de uso.
+    Possui diversos modelos, com peso, tamanho e vazão diferenciados para atender a necessidade específica de cada cliente.
+    `,
   },
   {
-    name: 'Filtro de água B',
-    src: filtroCentral,
+    name: 'Linha Industrial',
+    src: filtroIndustrial,
     cta: CTA_WA_MESSAGES.filter2,
+    desc: `Usados para levar água de alta qualidade para indústrias, estações de tratamento, hospitais, laboratórios  e demais locais que dependem da água de qualidade para
+    alcançar resultados excelentes no processo.
+    Possui diversos modelos, com peso, tamanho e vazão diferenciados para atender a necessidade específica de cada cliente.`,
   },
   {
-    name: 'Filtro de água C',
-    src: filtroCentral,
+    name: 'Válvulas Automatizadas',
+    src: filtroAutomatizada,
     cta: CTA_WA_MESSAGES.filter3,
+    desc: `Os filtros centrais também podem ser instalados com válvulas automatizadas. Nele você programa as operações de filtragem, retrolavagem e drenagem.
+    Otimizando o tempo e o contato manual`,
   },
 ]
 
@@ -458,86 +468,26 @@ const FeatureSection = props => {
           </div>
 
           <div className="mt-10 -mx-4 relative lg:mt-0" aria-hidden="true">
-            <svg
-              className="absolute left-1/2 transform -translate-x-1/2 translate-y-16 lg:hidden"
-              width={784}
-              height={404}
-              fill="none"
-              viewBox="0 0 784 404"
-            >
-              <defs>
-                <pattern
-                  id="ca9667ae-9f92-4be7-abcb-9e3d727f2941"
-                  x={0}
-                  y={0}
-                  width={20}
-                  height={20}
-                  patternUnits="userSpaceOnUse"
-                >
-                  <circle
-                    cx="2"
-                    cy="2"
-                    r="2"
-                    className="text-blue-200"
-                    fill="currentColor"
-                  ></circle>
-                </pattern>
-              </defs>
-              <rect
-                width={784}
-                height={404}
-                fill="url(#ca9667ae-9f92-4be7-abcb-9e3d727f2941)"
-              />
-            </svg>
-            <div className="mt-10 -mx-4 relative lg:mt-0 lg:col-start-1">
+            <div className="mt-10 -mx-4 lg:mt-0 lg:col-start-1 px-8 md:px-16">
               {filters.map((p, index) => (
-                <ProductCard
+                <div
                   key={p.name}
-                  onClickDetails={() => {
-                    if (collapsedIndex === index) {
-                      setCollapsedIndex(-1)
-                    } else {
-                      setCollapsedIndex(index)
-                    }
-                  }}
-                  collapsed={collapsedIndex === index}
-                  {...p}
-                  srcWrapperClassName="h-60 w-16 px-0 my-2"
-                  srcClassName="h-60 w-16 "
+                  className="flex mt-4 bg-white shadow-xl rounded-xl py-2"
                 >
-                  <ul className="flex">
-                    <li>
-                      <p className="text-gray-500 mx-2">primeiro detalhe</p>
-                    </li>
-                    <li>
-                      <p className="text-gray-500 mx-2">segundo detalhe</p>
-                    </li>
-                  </ul>
-                  <ul className="flex">
-                    <li>
-                      <p className="text-gray-500 mx-2">primeiro detalhe</p>
-                    </li>
-                    <li>
-                      <p className="text-gray-500 mx-2">segundo detalhe</p>
-                    </li>
-                  </ul>
-                  <ul className="flex">
-                    <li>
-                      <p className="text-gray-500 mx-2">primeiro detalhe</p>
-                    </li>
-                    <li>
-                      <p className="text-gray-500 mx-2">segundo detalhe</p>
-                    </li>
-                  </ul>
-                  <ul className="flex">
-                    <li>
-                      <p className="text-gray-500 mx-2">primeiro detalhe</p>
-                    </li>
-                    <li>
-                      <p className="text-gray-500 mx-2">segundo detalhe</p>
-                    </li>
-                  </ul>
-                </ProductCard>
+                  <div className="flex mx-8 my-4 flex-col md:flex-row items-center ">
+                    <img className={'h-56 w-auto rounded-xl'} src={p.src} />
+                    <div className="md:px-8 flex flex-col items-center text-center">
+                      <a
+                        className="text-lg text-gray-800 hover:text-blue-400 cursor-pointer font-bold"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        {p.name}
+                      </a>
+                      <p className="text-gray-500 pt-4">{p.desc}</p>
+                    </div>
+                  </div>
+                </div>
               ))}
             </div>
           </div>
