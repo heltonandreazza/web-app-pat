@@ -35,9 +35,9 @@ export const CTA_WA_MESSAGES = {
   products5:
     'Olá, estive no site e me interessei no Purificador de água Soft PLUS! Poderia me ajudar?',
   filter1:
-    'Olá, estive no site e me interessei no Filtro central de água A! Poderia me ajudar?',
+    'Olá, estive no site e me interessei no Filtro Central de Água Residencial! Eu gostaria de agendar uma visita gratuita!',
   filter2:
-    'Olá, estive no site e me interessei no Filtro central de água B! Poderia me ajudar?',
+    'OlÁ, estive no site e me interessei no Filtro Central de Água Industrial! Eu gostaria de agendar uma visita gratuita!',
   filter3:
-    'Olá, estive no site e me interessei no Filtro central de água C! Poderia me ajudar?',
+    'OlÁ, estive no site e me interessei no Filtro Central de Água Válvulas Automatizadas! Eu gostaria de agendar uma visita gratuita!',
 }

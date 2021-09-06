@@ -485,6 +485,14 @@ const FeatureSection = props => {
                         {p.name}
                       </a>
                       <p className="text-gray-500 pt-4">{p.desc}</p>
+                      <a
+                        href={getWhatsUrl(p.cta)}
+                        className="mt-2 rounded-md shadow-md bg-blue-500 hover:bg-blue-600 px-4 py-2 text-white"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        Agende uma visita gratuita
+                      </a>
                     </div>
                   </div>
                 </div>
