@@ -6,7 +6,7 @@ import FeatureSection from '../components/FeatureSection'
 import Footer from '../components/Footer'
 import Header from '../components/Header'
 import Hero from '../components/Hero'
-import LogoClound from '../components/LogoClound'
+import LogoClound from '../components/LogoClound2'
 import '../styles/global.css'
 
 const Index = () => {
