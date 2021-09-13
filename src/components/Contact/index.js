@@ -92,7 +92,7 @@ export default function Example() {
               }
               className="text-blue-500 font-medium"
             >
-              purificadorestimbo@gmail.com
+              purificadorespuribrastimbo@gmail.com
             </a>
             , preenchendo esse formulário ou nos contate via{' '}
             <a
@@ -174,7 +174,7 @@ export default function Example() {
                   id="phone-number"
                   autoComplete="tel"
                   className="py-3 px-4 block w-full focus:ring-blue-500 focus:border-blue-500 border-gray-300 rounded-md"
-                  placeholder="(47) 98877-6655"
+                  placeholder="(99) 99999-9999"
                   onChange={event => setTelefone(event.target.value)}
                 />
               </div>

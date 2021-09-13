@@ -29,7 +29,7 @@ const Index = () => {
       <main>
         <Hero />
         <LogoClound id="clientes" />
-        <Header id="servicoes" />
+        <Header id="servicos" />
         <FeatureSection />
         <CtaSection />
         <BlogSection items={instaNodes} />

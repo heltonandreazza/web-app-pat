@@ -45,11 +45,11 @@ const Header = props => {
             Serviços
           </h1>
           <p className="mt-6 max-w-3xl text-xl text-white">
-            Tudo sobre os serviços de instalação oferecidos.
+            Conheça os serviços oferecidos pela Purificadores de Água Timbó.
           </p>
           <p className="mt-1 max-w-3xl text-xl text-white">
-            Venda, instalação e manutenção de filtros centrais de água,
-            purificadores e bebedouros.
+            Aqui você encontra tudo o que precisa para deixar sua água limpa de
+            verdade.
           </p>
         </div>
       </div>

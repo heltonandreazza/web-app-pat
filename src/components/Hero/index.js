@@ -78,14 +78,7 @@ const Hero = () => {
         </div>
       </div>
       <div className="w-full lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2 md:h-full">
-        <Slider
-          images={[
-            'banner6.png',
-            'banner3.jpeg',
-            'banner.jpeg',
-            'banner2.jpeg',
-          ]}
-        />
+        <Slider images={['banner6.png', 'banner3.jpeg']} />
       </div>
     </div>
   )

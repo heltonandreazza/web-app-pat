@@ -91,7 +91,7 @@ const purifiers = [
         label: 'Uso exclusivamente Residencial',
       },
       {
-        label: 'Modelo: Slim',
+        label: 'Modelo: Baby',
       },
       {
         label: 'Dimensões: 28,0x19,5x18,5 (A-L-P)',
@@ -121,7 +121,7 @@ const purifiers = [
             {...props}
           />
         ),
-        label: 'Água gelada',
+        label: 'Água natural e gelada',
       },
       {
         icon: props => (
@@ -170,7 +170,7 @@ const purifiers = [
             {...props}
           />
         ),
-        label: 'Água gelada',
+        label: 'Água natural e gelada',
       },
       {
         icon: props => (
@@ -220,7 +220,7 @@ const purifiers = [
             {...props}
           />
         ),
-        label: 'Água gelada',
+        label: 'Água natural e gelada',
       },
       {
         icon: props => (
@@ -269,7 +269,7 @@ const purifiers = [
             {...props}
           />
         ),
-        label: 'Água gelada',
+        label: 'Água natural e gelada',
       },
       {
         icon: props => (
@@ -279,7 +279,7 @@ const purifiers = [
             {...props}
           />
         ),
-        label: 'Uso exclusivamente Comercial',
+        label: 'Uso Comercial e Industrial',
       },
       {
         label: 'Modelo: Plus',
@@ -319,7 +319,7 @@ const filters = [
     name: 'Linha Industrial',
     src: filtroIndustrial,
     cta: CTA_WA_MESSAGES.filter2,
-    desc: `Usados para levar água de alta qualidade para indústrias, estações de tratamento, hospitais, laboratórios  e demais locais que dependem da água de qualidade para
+    desc: `Desenvolvidos para levar água de alta qualidade para indústrias, estações de tratamento, hospitais, laboratórios  e demais locais que dependem da água de qualidade para
     alcançar resultados excelentes no processo.
     Possui diversos modelos, com peso, tamanho e vazão diferenciados para atender a necessidade específica de cada cliente.`,
   },
@@ -372,27 +372,18 @@ const FeatureSection = props => {
 
         <div className="relative">
           <h2 className="text-center text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
-            Conheça os nossos produtos parceiros
+            Conheça os nossos produtos
           </h2>
           <p className="mt-4 max-w-3xl mx-auto text-center text-xl text-gray-500">
             Aqui na{' '}
             <span className="text-blue-700 font-bold">
               Purificadores de Água Timbó,
             </span>{' '}
-            nós nos comprometemos a entregar os{' '}
+            nós nos comprometemos em entregar os{' '}
             <span className="text-blue-700 font-medium">melhores serviços</span>{' '}
             aliados aos{' '}
             <span className="text-blue-700 font-medium">melhores produtos</span>{' '}
-            do mercado, por isso trabalhamos com grandes marcas parceiras como{' '}
-            <a
-              className="underline text-blue-400"
-              href="https://www.softpurificadores.com.br/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Soft Everest
-            </a>
-            .
+            do mercado.
           </p>
         </div>
 

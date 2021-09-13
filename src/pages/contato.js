@@ -3,6 +3,7 @@ import { MenuIcon, XIcon } from '@heroicons/react/outline'
 import React, { Fragment } from 'react'
 import Contact from '../components/Contact'
 import Footer from '../components/Footer'
+import logo from '../images/logo.png'
 import '../styles/global.css'
 import { getWhatsUrl } from '../utils'
 import { CTA_WA_MESSAGES } from '../utils/constants'
@@ -15,11 +16,7 @@ const Navigation = () => {
           <div className="flex justify-start lg:w-0 lg:flex-1">
             <a href="/">
               <span className="sr-only">Workflow</span>
-              <img
-                className="h-8 w-auto sm:h-10"
-                src="https://tailwindui.com/img/logos/workflow-mark-blue-600.svg"
-                alt=""
-              />
+              <img className="h-8 w-auto sm:h-10" src={logo} alt="" />
             </a>
           </div>
           <div className="-mr-2 -my-2 md:hidden">
@@ -165,7 +162,7 @@ const Contacts = () => {
             <div className="mt-8 grid grid-cols-1 gap-12 sm:grid-cols-2 sm:gap-x-8 sm:gap-y-12 lg:mt-0 lg:col-span-2">
               <div>
                 <h3 className="text-lg leading-6 font-medium text-gray-900">
-                  Nossos consultores
+                  Timbó - SC
                 </h3>
                 <dl className="mt-2 text-base text-gray-500">
                   <div>
@@ -178,7 +175,7 @@ const Contacts = () => {
                         }
                         className="text-blue-400 underline"
                       >
-                        purificadorestimbo@gmail.com
+                        purificadorespuribrastimbo@gmail.com
                       </a>
                     </dd>
                   </div>
@@ -191,7 +188,20 @@ const Contacts = () => {
                         target="_blank"
                         rel="noreferrer"
                       >
-                        (47) 9656-7125
+                        (47) 99656-7125
+                      </a>
+                    </dd>
+                  </div>
+                  <div className="mt-1">
+                    <dt className="sr-only">Phone number</dt>
+                    <dd>
+                      <a
+                        href={`https://wa.me/5547999667797?text=${CTA_WA_MESSAGES.ctaContact2}`}
+                        className="text-blue-400 underline"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        (47) 99966-7797
                       </a>
                     </dd>
                   </div>
@@ -199,16 +209,16 @@ const Contacts = () => {
               </div>
               <div>
                 <h3 className="text-lg leading-6 font-medium text-gray-900">
-                  Parceiro{' '}
-                  <a
-                    className="text-blue-400 underline"
-                    href="https://www.puribras.com.br/home"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    Puribras
-                  </a>
+                  São José dos Pinhas - PR{' '}
                 </h3>
+                <a
+                  className="text-blue-400 underline"
+                  href="https://www.puribras.com.br/home"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Puribras
+                </a>
                 <dl className="mt-2 text-base text-gray-500">
                   <div>
                     <dt className="sr-only">Email</dt>
@@ -226,7 +236,7 @@ const Contacts = () => {
                     <dt className="sr-only">Phone number</dt>
                     <dd>
                       <a
-                        href={getWhatsUrl(CTA_WA_MESSAGES.ctaContact2)}
+                        href={'https://wa.me/554133851377'}
                         className="text-blue-400 underline"
                         target="_blank"
                         rel="noreferrer"
