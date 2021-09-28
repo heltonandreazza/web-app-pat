@@ -11,7 +11,7 @@ const BlogSection = ({ items, ...props }) => {
       </div>
       <div className="relative max-w-7xl mx-auto">
         <div className="text-center">
-          <h2 className="text-3xl tracking-tight font-extrabold text-gray-900 sm:text-4xl">
+          <h2 className="text-3xl tracking-tight font-extrabold text-gray-900 sm:text-4xl mb-4">
             Nos siga no Instagram
           </h2>
           <a

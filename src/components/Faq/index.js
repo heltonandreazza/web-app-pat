@@ -21,18 +21,29 @@ const faqs = [
     question:
       'E se o problema da minha água for contaminação por metais pesados? (ferro e manganês) o filtro central resolve?',
     answer:
-      'Resolve sim. Quando há incidência de contaminação por metais pesados na água, além dos cristais de quartzo em granulometrias diferenciadas, uma carga especial é adicionada ao filtro composta por um produto natural denominado greensand, que tem a função de reter e reduzir esses contaminantes da água.',
+      'Resolve sim. Quando você tem o problema de ferro na água, manganês na água, ou a incidência de outros metais pesados na água do poço, além dos cristais de quartzo em granulometrias diferenciadas, uma carga especial é adicionada ao filtro composta por um produto natural denominado greensand, que tem a função de reter e reduzir esses contaminantes da água.',
   },
   {
     question: 'Por que o filtro central me proporciona mais economia?',
     answer:
-      'Porque com água filtrada em todos os pontos de uso os seus equipamentos como lavadoras, chuveiros e outras máquinas vão permanecer limpos, sem entupir e danificar. Prorrogando sua vida útil. Você vai economizar também com a limpeza da caixa d’água, que vai permanecer limpa por mais tempo. Além de consumir água limpa, que vai evitar o aparecimento de doenças.',
+      'Porque com água filtrada em todos os pontos de uso os seus equipamentos como lavadoras, chuveiros e outras máquinas vão permanecer limpos, sem entupir e danificar. Prorrogando sua vida útil. Você vai economizar também com a limpeza da caixa d’água, que vai permanecer limpa por mais tempo. Além de consumir água de qualidade que vai evitar o aparecimento de doenças.',
   },
   {
     question:
       'Quando devo trocar o refil do meu purificador de água Soft Everest?',
     answer:
-      'Sua troca é recomendada de 09 a 12 meses de uso, dependendo da qualidade da água recebida.',
+      'Sua troca é recomendada de 09 a 12 meses de uso, dependendo da qualidade da água recebida. Você encontra Soft Everest em Timbó.  Aqui na Purificadores de Água Timbó trabalhamos com o refil Everest original. Conhecido também como filtro 2x1 original Soft Everest.',
+  },
+  {
+    question:
+      'E se meu purificador for de outra marca? Onde encontro o refil para comprar?',
+    answer:
+      'Na Purificadores de Água Timbó você encontra refis multimarcas, é só entrar em contato conosco que levamos até você e realizamos a troca.',
+  },
+  {
+    question: 'É necessário fazer manutenção em bebedouros de água?',
+    answer:
+      'Sim. Seja em bebedouro industrial, ou bebedouro escolar, a manutenção preventiva é recomendada pela Organização Mundial da Saúde e seus fabricantes. É aconselhável a  cada 06 (seis) meses higienizar os bebedouros, purificadores e filtros de água, afim de evitar a contaminação por algas, barro, areia, entre outros sedimentos. Essas contaminações podem ocasionar odor e mau gosto na água. O acúmulo desses sedimentos pode causar entupimento nos bebedouros, purificadores e filtros de água, mau funcionamento do termostato, entre outros problemas. A falta de higienização dos bebedouros, purificadores e filtros de água podem provocar transtornos no aparelho digestivo, devido a formação de biofilme (paredes bacteriológicas).',
   },
 ]
 
@@ -45,7 +56,7 @@ export default function Example() {
     <div className="bg-gray-50" id="faq">
       <div className="max-w-7xl mx-auto py-12 px-4 sm:py-16 sm:px-6 lg:px-8">
         <div className="max-w-3xl mx-auto">
-          <h2 className="text-center text-3xl font-extrabold text-gray-900 sm:text-4xl">
+          <h2 className="text-center text-3xl font-extrabold text-gray-900 sm:text-4xl mb-4">
             Perguntas Frequentes
           </h2>
           <p className="text-center text-xl font-medium text-gray-600 sm:text-xl">

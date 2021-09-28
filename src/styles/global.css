@@ -1,5 +1,6 @@
 /* @import url('/fonts/stylesheet.css'); */
-@import url('https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500;700;800&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500;700;800&display=swap'); */
+@import url('https://fonts.cdnfonts.com/css/gotham');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

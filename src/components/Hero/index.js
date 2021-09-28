@@ -33,7 +33,7 @@ const Hero = () => {
             <div className="sm:text-center lg:text-left">
               <h1 className="text-2xl tracking-tight font-extrabold text-gray-900 sm:text-5xl">
                 <span className="block">Purificadores de Água Timbó</span>
-                <span className="block text-blue-600 text-2xl mt-4 md:text-5xl">
+                <span className="block text-blue-600 text-2xl mt-4 md:text-4xl">
                   Levamos qualidade de vida até você, através da água filtrada.
                 </span>
               </h1>
@@ -56,7 +56,7 @@ const Hero = () => {
                   <a
                     href={getWhatsUrl(CTA_WA_MESSAGES.heroCta1)}
                     target="_blank"
-                    className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 md:py-4 md:text-lg md:px-10"
+                    className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 md:py-4 md:text-lg md:px-10 pt-5 md:pt-7"
                     rel="noreferrer"
                   >
                     Agende uma visita gratuita
@@ -66,7 +66,7 @@ const Hero = () => {
                   <a
                     href={getWhatsUrl(CTA_WA_MESSAGES.heroCta2)}
                     target="_blank"
-                    className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-blue-700 bg-blue-100 hover:bg-blue-200 md:py-4 md:text-lg md:px-10"
+                    className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-blue-700 bg-blue-100 hover:bg-blue-200 md:py-4 md:text-lg md:px-10 pt-5 md:pt-7"
                     rel="noreferrer"
                   >
                     Fale conosco

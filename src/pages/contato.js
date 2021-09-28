@@ -16,7 +16,7 @@ const Navigation = () => {
           <div className="flex justify-start lg:w-0 lg:flex-1">
             <a href="/">
               <span className="sr-only">Workflow</span>
-              <img className="h-8 w-auto sm:h-10" src={logo} alt="" />
+              <img className="h-20 w-auto" src={logo} alt="" />
             </a>
           </div>
           <div className="-mr-2 -my-2 md:hidden">
@@ -60,7 +60,7 @@ const Navigation = () => {
           <div className="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
             <a
               href={getWhatsUrl(CTA_WA_MESSAGES.ctaContact1)}
-              className="ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-green-600 hover:bg-green-700"
+              className="ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 pt-4 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-green-600 hover:bg-green-700"
               target="_blank"
               rel="noreferrer"
             >

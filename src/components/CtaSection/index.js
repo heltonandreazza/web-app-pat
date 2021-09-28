@@ -23,7 +23,7 @@ const CtaSection = props => {
               </p>
               <a
                 href={getWhatsUrl(CTA_WA_MESSAGES.ctaBanner1)}
-                className="mt-8 bg-white border border-transparent rounded-md shadow px-5 py-3 inline-flex items-center text-base font-medium text-blue-600 hover:bg-blue-50"
+                className="mt-8 bg-white border border-transparent rounded-md shadow px-5 py-3 inline-flex items-center text-base font-medium text-blue-600 hover:bg-blue-50 pt-5 md:pt-6"
               >
                 Fale conosco
               </a>

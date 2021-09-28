@@ -25,7 +25,7 @@ const filterFeatures = [
   {
     id: 3,
     description:
-      'Porque ele tem carvão ativado que tira o gosto ruim e os odores da água.',
+      'Porque ele tem carvão ativado que tira o gosto ruim da água, eliminando odores desagradáveis, reduzindo o cloro na água da rede pública e garantindo qualidade para a água de poço.',
     icon: LightningBoltIcon,
   },
   {
@@ -396,11 +396,12 @@ const FeatureSection = props => {
               Filtro Central de Água
             </h3>
             <p className="mt-3 text-lg text-gray-600">
-              É um equipamento que retém impurezas e partículas de resíduos
-              presentes na água que chega nas torneiras da sua casa ou empresa.
-              Seja água da rede pública ou de poços e nascentes. Com o filtro
-              você terá mais segurança em consumir a água e consequentemente
-              mais qualidade de vida e saúde para toda a sua família.
+              Conhecido também com o filtro central de entrada, é um equipamento
+              que retém impurezas e partículas de resíduos presentes na água que
+              chega nas torneiras da sua casa ou empresa. Seja água da rede
+              pública ou de poços e nascentes. Com o filtro de água você terá
+              mais segurança em consumir a água e consequentemente mais
+              qualidade de vida e saúde para toda a sua família.
             </p>
 
             <h3 className="mt-10 text-2xl font-extrabold text-gray-900 tracking-tight sm:text-2xl">
@@ -449,7 +450,7 @@ const FeatureSection = props => {
                 <a
                   href={getWhatsUrl(CTA_WA_MESSAGES.products0)}
                   target="_blank"
-                  className="mt-8 rounded-md shadow-md bg-blue-500 hover:bg-blue-700 px-6 py-4 text-white"
+                  className="mt-8 rounded-md shadow-md bg-blue-500 hover:bg-blue-700 px-6 py-4 pt-6 text-white"
                   rel="noreferrer"
                 >
                   Agende uma visita gratuita
@@ -478,7 +479,7 @@ const FeatureSection = props => {
                       <p className="text-gray-500 pt-4">{p.desc}</p>
                       <a
                         href={getWhatsUrl(p.cta)}
-                        className="mt-2 rounded-md shadow-md bg-blue-500 hover:bg-blue-600 px-4 py-2 text-white"
+                        className="mt-2 rounded-md shadow-md bg-blue-500 hover:bg-blue-600 px-4 py-2 pt-4 text-white"
                         target="_blank"
                         rel="noreferrer"
                       >

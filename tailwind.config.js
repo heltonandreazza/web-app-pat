@@ -32,7 +32,7 @@ module.exports = {
         300: '#3F74A3',
         400: '#226199',
         500: '#0F4B81',
-        600: '#073B6A',
+        600: '#0F4C81',
         700: '#032B4F',
         800: '#011D36',
         900: '#000E1A',
@@ -40,7 +40,7 @@ module.exports = {
     },
     extend: {
       fontFamily: {
-        sans: ['Maven Pro', ...defaultTheme.fontFamily.sans],
+        sans: ['Gotham', ...defaultTheme.fontFamily.sans],
       },
     },
   },

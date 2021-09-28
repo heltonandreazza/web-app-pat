@@ -23,7 +23,7 @@ const ProductCard = ({
 }) => {
   const isNotMobile = useMediaQuery('(min-width:640px)')
   return (
-    <div className="flex items-center px-4 md:px-16 mt-4">
+    <div className="flex items-center px-4 md:px-14 mt-4">
       <div className="flex flex-col p-4 md:p-0 bg-white shadow-xl rounded-xl w-full h-auto">
         <div className="flex flex-col md:flex-row items-center ">
           {images?.length && (
@@ -49,7 +49,7 @@ const ProductCard = ({
           <div className="flex flex-col items-center">
             {src2 && <img className="hidden md:flex h-20" src={src2} />}
           </div>
-          <div className="pl-8 flex flex-col items-center">
+          <div className="md:pl-8 flex flex-col items-center">
             <a
               className="text-lg text-gray-800 hover:text-blue-400 cursor-pointer font-bold"
               target="_blank"
@@ -61,7 +61,7 @@ const ProductCard = ({
             <div className="flex">
               <a
                 href={getWhatsUrl(cta)}
-                className="mt-2 rounded-md shadow-md bg-blue-500 hover:bg-blue-600 px-4 py-2 text-white"
+                className="mt-2 rounded-md shadow-md bg-blue-500 hover:bg-blue-600 px-4 py-2 pt-4 text-white"
                 target="_blank"
                 rel="noreferrer"
               >
@@ -69,7 +69,7 @@ const ProductCard = ({
               </a>
               {items && (
                 <a
-                  className="mt-2 ml-2 rounded-md shadow-md bg-blue-100 hover:bg-blue-200 cursor-pointer px-4 py-2 text-blue-600"
+                  className="mt-2 ml-2 rounded-md shadow-md bg-blue-100 hover:bg-blue-200 cursor-pointer px-4 py-2 pt-4 text-blue-600"
                   onClick={onClickDetails}
                 >
                   {`${collapsed ? '-' : '+'} Detalhes`}
