@@ -25,20 +25,14 @@ const BlogSection = ({ items, ...props }) => {
         </div>
         <div className="mt-12 max-w-lg mx-auto grid gap-0 lg:grid-cols-3 lg:max-w-none">
           {items?.map(
-            ({
-              id,
-              media_url,
-              media_type,
-              permalink,
-              timestamp,
-              caption,
-              username,
-              thumbnail_url,
-            }) => (
+            ({ id, media_url, permalink, caption, thumbnail_url, preview }) => (
               <a
                 key={id}
                 className="flex flex-col shadow-lg overflow-hidden"
                 href={permalink}
+                using
+                API
+                // href={`https://www.instagram.com/p/${id}/`}
                 target="_blank"
                 rel="noreferrer"
               >
@@ -47,6 +41,9 @@ const BlogSection = ({ items, ...props }) => {
                     <img
                       className="h-full w-full object-cover"
                       src={thumbnail_url || media_url}
+                      using
+                      API
+                      // src={preview}
                       alt=""
                     />
                     <div className="absolute inset-0 index-10 bg-blue-500 opacity-0 hover:opacity-60 cursor-pointer h-full w-full">

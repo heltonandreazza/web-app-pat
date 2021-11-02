@@ -9,12 +9,19 @@ import Hero from '../components/Hero'
 import LogoClound from '../components/LogoClound2'
 import '../styles/global.css'
 
+const accessToken = {
+  access_token:
+    'IGQVJXRHllcmZADV3lSRUhmXzJ6SUpURm9VV0VzcGJSUjgwTUxWdWRmTGhtcllIZAlJEUV91UGNxOGxBV2hWc1IyYlltZAzdUeVpaTWxwTEtzaUtUSDhaYWU3ejBkcnY5QVhJLW92Tzd3',
+  token_type: 'bearer',
+  expires_in: 5184000,
+}
+
 const Index = () => {
   const [instaNodes, setInstaNodes] = useState(null)
 
   async function loadInstaNodes() {
     const response = await fetch(
-      'https://graph.instagram.com/me/media?fields=id,media_url,media_type,permalink,timestamp,caption,username,thumbnail_url,children{id,media_url,media_type,thumbnail_url,timestamp}&access_token=IGQVJWQVA2dG1DWXB6Qm82bDFGQnZAmYUktSTBYRmxWTW40QVBCbjRTRXQ3Szd5ZAG9tWGJvZAm5RVko2UEJOWWNJVXhPUkoxdkU0OGNGMUd5RE9mUjNoN2I4UlhTQ2JXUzFVSjdsQVNPZAmo3NDFnTUhGUQZDZD&limit=6',
+      `https://graph.instagram.com/me/media?fields=id,media_url,media_type,permalink,timestamp,caption,username,thumbnail_url,children{id,media_url,media_type,thumbnail_url,timestamp}&access_token=${accessToken.access_token}&limit=6`,
     )
     const result = await response.json()
     setInstaNodes(result?.data)

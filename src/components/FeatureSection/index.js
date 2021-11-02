@@ -541,11 +541,8 @@ const FeatureSection = props => {
               </p>
               <p className="mt-3 text-lg text-gray-600">
                 Produto certificado pelo{' '}
-                <span className="text-blue-700 font-medium">INMETRO</span> e com{' '}
-                <span className="text-blue-700 font-bold">
-                  1 ano de garantia
-                </span>{' '}
-                o purificador de água{' '}
+                <span className="text-blue-700 font-medium">INMETRO</span> o
+                purificador de água{' '}
                 <span className="text-blue-700 font-medium">Soft Everest</span>{' '}
                 possui filtro de alta eficiência e dupla filtração. Reduz o
                 cloro e retém as partículas da água. Suas partes como o bico e a
