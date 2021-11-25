@@ -22,7 +22,7 @@ const Sucess = () => (
             Obrigado por entrar em contato
           </p>
           <div className="mt-6">
-            <a href="/" className="text-base font-medium text-blue-600 hover:text-blue-500">
+            <a href="/" className="text-base font-medium text-blue-600 hover:text-blue-500 inline-flex">
               Volte para a página principal
               <span aria-hidden="true"> &rarr;</span>
             </a>
