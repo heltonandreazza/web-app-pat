@@ -1,0 +1,30 @@
+https://api.instagram.com/oauth/authorize?client_id=280948480507419&redirect_uri=https://purificadoresdeaguatimbo.com.br/&scope=user_profile&response_type=code
+
+authenticated: true
+loginNonce: "0SipbJgU4samPF6uMvkAjqYwOZuxmIU4nqkEUVvrvZj7OyK4owVmCfB2tlcWLtS7"
+status: "ok"
+user: true
+userId: "14756696469"
+
+
+
+
+AQCAhh_r1-0zdgx8-0fYTJhoZuBwYaG56dn_qStJq9Vhdhf81PJT9jZtC3pEjIcuWrnvK2T1E-3pzRNa61nnD6DFtryBgE8mWCFNbDOn-BTRa6StTdYKbtzQeB84T-X8agoRjBQcjniV7Iq-ZmAbNDo6BfrpXcxuvY_ExWXd54R6txLZ4e4oJRJzOF_0rUCz8VQJjSY9-csoUlmracgu91imxD_PUCEtpUgNokG7pLxwwQ#_
+
+
+curl -X POST \
+  https://api.instagram.com/oauth/access_token \
+   -f client_id=280948480507419 \
+   -f client_secret=c8375596fe90667af7d4251c2c3d29bf \
+   -f grant_type=authorization_code \
+   -f redirect_uri=https://purificadoresdeaguatimbo.com.br \
+   -f code=AQCAhh_r1-0zdgx8-0fYTJhoZuBwYaG56dn_qStJq9Vhdhf81PJT9jZtC3pEjIcuWrnvK2T1E-3pzRNa61nnD6DFtryBgE8mWCFNbDOn-BTRa6StTdYKbtzQeB84T-X8agoRjBQcjniV7Iq-ZmAbNDo6BfrpXcxuvY_ExWXd54R6txLZ4e4oJRJzOF_0rUCz8VQJjSY9-csoUlmracgu91imxD_PUCEtpUgNokG7pLxwwQ#_
+
+  
+  
+curl -X POST -F 'client_id=280948480507419' -F 'client_secret=c8375596fe90667af7d4251c2c3d29bf' -F 'grant_type=authorization_code' -F 'redirect_uri=https://purificadoresdeaguatimbo.com.br/' -F 'code=AQC3P5_zThRdlIqqR28OUZCYYysxKghA7eWoD6SCV_CGMbJ4vkuTPSCduRGZmU8skBxfCHdHQ2d88K0jxnnO8tRh3T0ptoVnuFizBWpKBtJb7g0E1gz_x19frWako3UekA-igge_IIx8WVblZbFHicQ26JUaQUt_V0O0N_j5ZEH99YdZVmjUxpCikfQik7xncsjLy-AdyyJPEJtZ9HiRYRFREp91-7z6nwwyUzBw8fnfdA#_' https://api.instagram.com/oauth/access_token
+
+
+curl -i -X GET "https://graph.instagram.com/access_token?grant_type=ig_exchange_token&client_secret=c8375596fe90667af7d4251c2c3d29bf&access_token=IGQVJYejJfZAXZAJN0ZALWURMdklfRmppcFp0a0lMYzhMcjh2ejhYWjA3ZAFRyRF83eG8wVlYxaW05OXFLdnlXbXhReU1zMjU5X0hNN052MFYzd3Bfa0cxVC1XY0NWaWFUUndyLVZAPTVhCNGtVVlozQ2YtQ2dVT2FYcnR6QzV3"
+
+curl -i -X GET "https://graph.instagram.com/refresh_access_token?grant_type=ig_refresh_token&access_token=IGQVJXRHllcmZADV3lSRUhmXzJ6SUpURm9VV0VzcGJSUjgwTUxWdWRmTGhtcllIZAlJEUV91UGNxOGxBV2hWc1IyYlltZAzdUeVpaTWxwTEtzaUtUSDhaYWU3ejBkcnY5QVhJLW92Tzd3"

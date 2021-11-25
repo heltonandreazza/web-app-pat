@@ -106,9 +106,23 @@ export default function Example() {
             .
           </p>
         </div>
-        <div className="mt-12">
+        <form
+          action='/success/'
+          name='CONTATO-CLIENTES-PURIFICADORES-TIMBO'
+          method='post'
+          netlify-honeypot='bot-field'
+          data-netlify='true'
+          className='mt-12'
+          subject="Contato do cliente recebido via site!"
+        >
+          <input type='hidden' name='form-name' value='CONTATO-CLIENTES-PURIFICADORES-TIMBO' />
           <div className="grid grid-cols-1 gap-y-6">
             <div>
+              <p className='hidden'>
+                <label>
+                  Don’t fill this out if you’re human: <input name='bot-field' />
+                </label>
+              </p>
               <label className="block text-sm font-medium text-gray-700">
                 Nome
               </label>
@@ -205,22 +219,23 @@ export default function Example() {
                       ? 'bg-blue-500 hover:bg-blue-700 cursor-pointer'
                       : 'bg-gray-500 hover:bg-gray-700 cursor-not-allowed'
                   }`}
-                onClick={() => {
-                  if (allFields()) {
-                    const subject = 'Contato via site'
-                    const body = `nome:${nome}%0Atelefone: ${telefone}%0Aemail: ${email}%0Aempresa: ${empresa}%0Amensagem:${mensagem}`
+                type="submit"
+                // onClick={() => {
+                //   if (allFields()) {
+                //     const subject = 'Contato via site'
+                //     const body = `nome:${nome}%0Atelefone: ${telefone}%0Aemail: ${email}%0Aempresa: ${empresa}%0Amensagem:${mensagem}`
 
-                    open(
-                      `mailto:purificadorespuribrastimbo@gmail.com?subject=${subject}&body=${body}`,
-                    )
-                  }
-                }}
+                //     open(
+                //       `mailto:purificadorespuribrastimbo@gmail.com?subject=${subject}&body=${body}`,
+                //     )
+                //   }
+                // }}
               >
                 Enviar
               </button>
             </div>
           </div>
-        </div>
+        </form>
       </div>
     </div>
   )
