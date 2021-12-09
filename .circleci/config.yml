@@ -18,6 +18,13 @@ jobs:
           name: "Say hello"
           command: "echo Hello, World!"
 
+      - run:
+        name: Kick off new pipeline
+        command: |
+          curl --location --request POST 'https://circleci.com/api/v2/project/github/heltonandreazza/freitag-web-app/pipeline' \
+          --header 'Content-Type: application/json' \
+          -u "${API_TOKEN}"
+
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
 workflows:
