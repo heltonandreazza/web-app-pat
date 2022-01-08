@@ -8,3 +8,9 @@ build
 .idea/
 .vscode/
 .eslintcache
+.env*
+
+# Local Netlify folder
+# .netlify
+# Local Netlify folder
+.netlify

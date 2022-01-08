@@ -9,20 +9,19 @@ import Hero from '../components/Hero'
 import LogoClound from '../components/LogoClound2'
 import '../styles/global.css'
 
-const accessToken = {
-  access_token:
-    'IGQVJXRHllcmZADV3lSRUhmXzJ6SUpURm9VV0VzcGJSUjgwTUxWdWRmTGhtcllIZAlJEUV91UGNxOGxBV2hWc1IyYlltZAzdUeVpaTWxwTEtzaUtUSDhaYWU3ejBkcnY5QVhJLW92Tzd3',
-  token_type: 'bearer',
-  expires_in: 5184000,
-}
+console.log(`INDEX TOKEN ${process.env}`)
 
-const Index = () => {
+const OUTER_URL = `https://graph.instagram.com/me/media?fields=id,media_url,media_type,permalink,timestamp,caption,username,thumbnail_url,children{id,media_url,media_type,thumbnail_url,timestamp}&access_token=${process.env.GATSBY_INSTAGRAM_ACCESS_TOKEN}&limit=6`
+console.log('OUTER_URL', OUTER_URL)
+
+const Index = props => {
+  console.log('props', props)
   const [instaNodes, setInstaNodes] = useState(null)
 
   async function loadInstaNodes() {
-    const response = await fetch(
-      `https://graph.instagram.com/me/media?fields=id,media_url,media_type,permalink,timestamp,caption,username,thumbnail_url,children{id,media_url,media_type,thumbnail_url,timestamp}&access_token=${accessToken.access_token}&limit=6`,
-    )
+    const URL = `https://graph.instagram.com/me/media?fields=id,media_url,media_type,permalink,timestamp,caption,username,thumbnail_url,children{id,media_url,media_type,thumbnail_url,timestamp}&access_token=${process.env.GATSBY_INSTAGRAM_ACCESS_TOKEN}&limit=6`
+    console.log('URL', URL)
+    const response = await fetch(URL)
     const result = await response.json()
     setInstaNodes(result?.data)
   }
