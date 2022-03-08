@@ -20,14 +20,6 @@ jobs:
             curl --location --request POST 'https://circleci.com/api/v2/project/github/heltonandreazza/freitag-web-app/pipeline' \
             --header 'Content-Type: application/json' \
             -u "${API_TOKEN}" 
-          # 2d5a571e7e7a28d8a7905eb8296d4b3de8e5f28d
-
-      - run:
-        name: Kick off new pipeline
-        command: |
-          curl --location --request POST 'https://circleci.com/api/v2/project/github/heltonandreazza/freitag-web-app/pipeline' \
-          --header 'Content-Type: application/json' \
-          -u "${API_TOKEN}"
 
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
