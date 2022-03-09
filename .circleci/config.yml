@@ -15,7 +15,7 @@ jobs:
     steps:
       - checkout
       - run:
-          name: "Kick off AI plugin health-check pipeline"
+          name: Kick off AI plugin health-check pipeline
           command: |
             curl --request POST \
             --url https://circleci.com/api/v2/project/gh/launchpotato/alphaintent-plugin-e2e-healthcheck/pipeline \
