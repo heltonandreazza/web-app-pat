@@ -154,100 +154,76 @@ const Contacts = () => {
   return (
     <div className="bg-white">
       <div className="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:py-24 lg:px-8">
-        <div className="divide-y-2 divide-gray-200">
-          <div className="lg:grid lg:grid-cols-3 lg:gap-8">
+        <div className="flex">
+          <div className="flex-1 flex">
             <h2 className="text-2xl font-extrabold text-gray-900 sm:text-3xl">
               Contatos
             </h2>
-            <div className="mt-8 grid grid-cols-1 gap-12 sm:grid-cols-2 sm:gap-x-8 sm:gap-y-12 lg:mt-0 lg:col-span-2">
-              <div>
-                <h3 className="text-lg leading-6 font-medium text-gray-900">
-                  Timbó - SC
-                </h3>
-                <dl className="mt-2 text-base text-gray-500">
-                  <div>
-                    <dt className="sr-only">Email</dt>
-                    <dd>
-                      <a
-                        href="#"
-                        onClick={() =>
-                          open('mailto:purificadorespuribrastimbo@gmail.com')
-                        }
-                        className="text-blue-400 underline"
-                      >
-                        purificadorespuribrastimbo@gmail.com
-                      </a>
-                    </dd>
-                  </div>
-                  <div className="mt-1">
-                    <dt className="sr-only">Phone number</dt>
-                    <dd>
-                      <a
-                        href={getWhatsUrl(CTA_WA_MESSAGES.ctaContact2)}
-                        className="text-blue-400 underline"
-                        target="_blank"
-                        rel="noreferrer"
-                      >
-                        (47) 99656-7125
-                      </a>
-                    </dd>
-                  </div>
-                  <div className="mt-1">
-                    <dt className="sr-only">Phone number</dt>
-                    <dd>
-                      <a
-                        href={`https://wa.me/5547999667797?text=${CTA_WA_MESSAGES.ctaContact2}`}
-                        className="text-blue-400 underline"
-                        target="_blank"
-                        rel="noreferrer"
-                      >
-                        (47) 99966-7797
-                      </a>
-                    </dd>
-                  </div>
-                </dl>
-              </div>
-              <div>
-                <h3 className="text-lg leading-6 font-medium text-gray-900">
-                  São José dos Pinhas - PR{' '}
-                </h3>
-                <a
-                  className="text-blue-400 underline"
-                  href="https://www.puribras.com.br/home"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  Puribras
-                </a>
-                <dl className="mt-2 text-base text-gray-500">
-                  <div>
-                    <dt className="sr-only">Email</dt>
-                    <dd>
-                      <a
-                        href="#"
-                        onClick={() => open('mailto:puribras@puribras.com.br')}
-                        className="text-blue-400 underline"
-                      >
-                        puribras@puribras.com.br
-                      </a>
-                    </dd>
-                  </div>
-                  <div className="mt-1">
-                    <dt className="sr-only">Phone number</dt>
-                    <dd>
-                      <a
-                        href={'https://wa.me/554133851377'}
-                        className="text-blue-400 underline"
-                        target="_blank"
-                        rel="noreferrer"
-                      >
-                        (41) 3385-1377
-                      </a>
-                    </dd>
-                  </div>
-                </dl>
-              </div>
+          </div>
+          <div className="flex-1 flex flex-col">
+            <a
+              className="cursor-pointer mb-4 hover:text-blue-400 font-bold flex flex-col"
+              href="https://www.google.com/maps/dir/-26.8292028,-49.2839501/R.+Indaial,+418+-+Quintino,+Timb%C3%B3+-+SC,+89120-000/@-26.8317746,-49.284094,15z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x94defc15f85e1795:0xf450e06c2d6c1bf9!2m2!1d-49.268441!2d-26.8363719"
+              target="_blank"
+            >
+              <p>R. Indaial, 418 - Quintino</p>
+              <p>Timbó - SC</p>
+            </a>
+            <a
+              className="cursor-pointer mb-4 text-blue-400 underline"
+              href="#"
+              onClick={() =>
+                open('mailto:purificadorespuribrastimbo@gmail.com')
+              }
+            >
+              purificadorespuribrastimbo@gmail.com
+            </a>
+            <div className="flex">
+              <a
+                href={`https://wa.me/5547996567125?text=${CTA_WA_MESSAGES.ctaContact2}`}
+                className="cursor-pointer mb-4 text-blue-400 underline"
+                target="_blank"
+                rel="noreferrer"
+              >
+                (47) 99656-7125
+              </a>
+              /
+              <a
+                href={`https://wa.me/5547999667797?text=${CTA_WA_MESSAGES.ctaContact2}`}
+                className="cursor-pointer mb-4 text-blue-400 underline"
+                target="_blank"
+                rel="noreferrer"
+              >
+                (47) 99966-7797
+              </a>
             </div>
+            <a
+              href={`https://wa.me/554733047879?text=${CTA_WA_MESSAGES.ctaContact2}`}
+              className="cursor-pointer mb-4 text-blue-400 underline"
+              target="_blank"
+              rel="noreferrer"
+            >
+              (47) 3304-7879
+            </a>
+          </div>
+          <div className="flex-1 flex flex-col">
+            <p className='font-bold'>São José dos Pinhas - PR</p>
+            <a
+              className="font-bold cursor-pointer mb-4 text-blue-400 underline"
+              href="https://www.puribras.com.br/home"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Puribras
+            </a>
+            <a
+              href={'https://wa.me/554133851377'}
+              className="cursor-pointer mb-4 text-blue-400 underline"
+              target="_blank"
+              rel="noreferrer"
+            >
+              (41) 3385-1377
+            </a>
           </div>
         </div>
       </div>

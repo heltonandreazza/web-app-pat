@@ -8,7 +8,7 @@
     "update:instatoken": ". ./update-i-token.sh",
     "build": "env && node -p 'process.env' && npm run update:instatoken && gatsby build",
     "serve": "gatsby serve",
-    "start": "gatsby dev"
+    "start": "gatsby develop"
   },
   "repository": {
     "type": "git",

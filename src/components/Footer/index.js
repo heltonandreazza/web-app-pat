@@ -2,7 +2,6 @@
 import React from 'react'
 import { URLS } from '../../utils/constants'
 import { IconFB, IconInsta } from '../Icon'
-import AnchorLink from 'react-anchor-link-smooth-scroll'
 
 const DEFAULT_NAVIGATION = [
   { name: 'Clientes', href: '#clients' },
@@ -36,12 +35,12 @@ const Footer = ({ navigation = DEFAULT_NAVIGATION }) => {
         >
           {navigation.map(item => (
             <div key={item.name} className="px-5 py-2">
-              <a
-                href={item.href}
-                className="text-base text-gray-500 hover:text-gray-900"
+              <p
+                onClick={() => window.location.replace(item.href)}
+                className="cursor-pointer text-base text-gray-500 hover:text-gray-900"
               >
                 {item.name}
-              </a>
+              </p>
             </div>
           ))}
         </nav>
