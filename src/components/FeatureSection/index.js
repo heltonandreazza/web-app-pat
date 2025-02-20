@@ -52,7 +52,7 @@ const purifiersFeatures = [
   {
     id: 2,
     description:
-      'O purificador Soft Everest possui refil com carvão ativado que reduz o cloro da água, eliminando aquele gosto ruim da água da rede pública.',
+      'O purificador Everest possui refil com carvão ativado que reduz o cloro da água, eliminando aquele gosto ruim da água da rede pública.',
     icon: LightningBoltIcon,
   },
   {
@@ -65,7 +65,7 @@ const purifiersFeatures = [
 
 const purifiers = [
   {
-    name: 'Purificador de água Soft BABY',
+    name: 'Purificador de água BABY',
     src2: cores3,
     href: 'https://www.softpurificadores.com.br/purificadores/soft-baby/',
     cta: CTA_WA_MESSAGES.products1,
@@ -108,7 +108,7 @@ const purifiers = [
     ],
   },
   {
-    name: 'Purificador de água Soft FIT',
+    name: 'Purificador de água FIT',
     src2: cores4,
     href: 'https://www.softpurificadores.com.br/purificadores/soft-fit/',
     cta: CTA_WA_MESSAGES.products2,
@@ -157,7 +157,7 @@ const purifiers = [
     ],
   },
   {
-    name: 'Purificador de água Soft SLIM',
+    name: 'Purificador de água SLIM',
     src2: cores4,
     href: 'https://www.softpurificadores.com.br/purificadores/soft-slim/',
     cta: CTA_WA_MESSAGES.products3,
@@ -206,7 +206,7 @@ const purifiers = [
     ],
   },
   {
-    name: 'Purificador de água Soft STAR',
+    name: 'Purificador de água STAR',
     src2: cores4,
     href: 'https://www.softpurificadores.com.br/purificadores/soft-star/',
     cta: CTA_WA_MESSAGES.products4,
@@ -256,7 +256,7 @@ const purifiers = [
     ],
   },
   {
-    name: 'Purificador de água Soft PLUS',
+    name: 'Purificador de água PLUS',
     src2: cores4,
     href: 'https://www.softpurificadores.com.br/purificadores/soft-plus/',
     cta: CTA_WA_MESSAGES.products5,
@@ -531,19 +531,19 @@ const FeatureSection = props => {
             <div className="lg:col-start-2 lg:px-8">
               <h3 className="text-2xl font-extrabold text-gray-900 tracking-tight sm:text-3xl">
                 Purificadores de água{' '}
-                <span className="text-blue-700">Soft Everest</span>
+                <span className="text-blue-700">Everest</span>
               </h3>
               <p className="mt-3 text-lg text-gray-600">
                 Quer um purificador que seja refrigerado por compressor e com
                 baixo consumo de energia? Então o{' '}
-                <span className="text-blue-700 font-medium">Soft Everest</span>{' '}
+                <span className="text-blue-700 font-medium">Everest</span>{' '}
                 é para você!
               </p>
               <p className="mt-3 text-lg text-gray-600">
                 Produto certificado pelo{' '}
                 <span className="text-blue-700 font-medium">INMETRO</span> o
                 purificador de água{' '}
-                <span className="text-blue-700 font-medium">Soft Everest</span>{' '}
+                <span className="text-blue-700 font-medium">Everest</span>{' '}
                 possui filtro de alta eficiência e dupla filtração. Reduz o
                 cloro e retém as partículas da água. Suas partes como o bico e a
                 pingadeira são removíveis para facilitar a limpeza e o

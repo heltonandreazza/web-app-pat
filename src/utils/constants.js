@@ -25,15 +25,15 @@ export const CTA_WA_MESSAGES = {
   products0:
     'Olá, estive no site e me interessei em adquirir um filtro central de água! Poderia me ajudar?',
   products1:
-    'Olá, estive no site e me interessei no Purificador de água Soft BABY! Poderia me ajudar?',
+    'Olá, estive no site e me interessei no Purificador de água BABY! Poderia me ajudar?',
   products2:
-    'Olá, estive no site e me interessei no Purificador de água Soft FIT! Poderia me ajudar?',
+    'Olá, estive no site e me interessei no Purificador de água FIT! Poderia me ajudar?',
   products3:
-    'Olá, estive no site e me interessei no Purificador de água Soft SLIM! Poderia me ajudar?',
+    'Olá, estive no site e me interessei no Purificador de água SLIM! Poderia me ajudar?',
   products4:
-    'Olá, estive no site e me interessei no Purificador de água Soft STAR! Poderia me ajudar?',
+    'Olá, estive no site e me interessei no Purificador de água STAR! Poderia me ajudar?',
   products5:
-    'Olá, estive no site e me interessei no Purificador de água Soft PLUS! Poderia me ajudar?',
+    'Olá, estive no site e me interessei no Purificador de água PLUS! Poderia me ajudar?',
   filter1:
     'Olá, estive no site e me interessei no Filtro Central de Água Residencial! Eu gostaria de agendar uma visita gratuita!',
   filter2:

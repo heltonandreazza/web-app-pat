@@ -1,4 +1,34 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+
+const InstagramEmbedPost = ({ postUrl }) => {
+  useEffect(() => {
+    const script = document.createElement('script')
+    script.async = true
+    script.src = 'https://www.instagram.com/embed.js'
+    document.body.appendChild(script)
+  }, [])
+
+  return (
+    <blockquote
+      className={`instagram-media bg-white border-0 rounded-md shadow-md m-1 max-w-lgp-0 flex flex-1`}
+      style={{
+        minHeight: '1084px',
+      }}
+      data-instgrm-captioned
+      data-instgrm-permalink={postUrl}
+      data-instgrm-version="14"
+    >
+      <a
+        href={postUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="block bg-white text-center no-underline w-full p-2 text-blue-500 font-semibold"
+      >
+        View this post on Instagram
+      </a>
+    </blockquote>
+  )
+}
 
 const BlogSection = ({ items, ...props }) => {
   return (
@@ -10,52 +40,41 @@ const BlogSection = ({ items, ...props }) => {
         <div className="bg-white h-1/3 sm:h-2/3" />
       </div>
       <div className="relative max-w-7xl mx-auto">
-        <div className="text-center">
+        <a
+          className="text-center no-underline"
+          href="https://www.instagram.com/purificadoresdeaguatimbo/?utm_source=site"
+          target="_blank"
+        >
           <h2 className="text-3xl tracking-tight font-extrabold text-gray-900 sm:text-4xl mb-4">
             Nos siga no Instagram
           </h2>
-          <a
-            className="mt-3 max-w-2xl mx-auto text-xl sm:mt-4 text-blue-400 hover:text-blue-500 underline"
-            href="https://www.instagram.com/purificadoresdeaguatimbo/"
-            target="_blank"
-            rel="noreferrer"
-          >
+          <div className="mt-3 max-w-2xl mx-auto text-xl sm:mt-4 text-blue-400 hover:text-blue-500 underline">
             @purificadoresdeaguatimbo
-          </a>
+          </div>
+        </a>
+        <div className="desktop hidden md:flex gap-8 mt-8">
+          <InstagramEmbedPost
+            postUrl={
+              'https://www.instagram.com/p/DFsGqm3RVBe/?utm_source=ig_embed&amp;utm_campaign=loading'
+            }
+          />
+          <InstagramEmbedPost
+            postUrl={
+              'https://www.instagram.com/p/DFbEdZ7oI3D/?utm_source=ig_embed&amp;utm_campaign=loading'
+            }
+          />
+          <InstagramEmbedPost
+            postUrl={
+              'https://www.instagram.com/p/DFu3kGhNWYS/?utm_source=ig_embed&amp;utm_campaign=loading'
+            }
+          />
         </div>
-        <div className="mt-12 max-w-lg mx-auto grid gap-0 lg:grid-cols-3 lg:max-w-none">
-          {items?.map(
-            ({ id, media_url, permalink, caption, thumbnail_url, preview }) => (
-              <a
-                key={id}
-                className="flex flex-col shadow-lg overflow-hidden"
-                href={permalink}
-                using
-                API
-                // href={`https://www.instagram.com/p/${id}/`}
-                target="_blank"
-                rel="noreferrer"
-              >
-                <div className="flex-shrink-0">
-                  <div className="relative h-auto w-full">
-                    <img
-                      className="h-full w-full object-cover"
-                      src={thumbnail_url || media_url}
-                      using
-                      API
-                      // src={preview}
-                      alt=""
-                    />
-                    <div className="absolute inset-0 index-10 bg-blue-500 opacity-0 hover:opacity-60 cursor-pointer h-full w-full">
-                      <p className="text-white font-medium text-center px-16 py-14 opacity-100">
-                        {`${caption?.substr(0, 350)}...`}
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </a>
-            ),
-          )}
+        <div className="mobile flex md:hidden flex-col mt-8">
+          <InstagramEmbedPost
+            postUrl={
+              'https://www.instagram.com/p/DFsGqm3RVBe/?utm_source=ig_embed&amp;utm_campaign=loading'
+            }
+          />
         </div>
       </div>
     </div>

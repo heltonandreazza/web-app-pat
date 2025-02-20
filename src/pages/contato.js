@@ -154,8 +154,8 @@ const Contacts = () => {
   return (
     <div className="bg-white">
       <div className="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:py-24 lg:px-8">
-        <div className="flex">
-          <div className="flex-1 flex">
+        <div className="flex flex-col gap-8 justify-self-center md:flex-row">
+          <div className="flex">
             <h2 className="text-2xl font-extrabold text-gray-900 sm:text-3xl">
               Contatos
             </h2>
@@ -187,15 +187,6 @@ const Contacts = () => {
               >
                 (47) 99656-7125
               </a>
-              /
-              <a
-                href={`https://wa.me/5547999667797?text=${CTA_WA_MESSAGES.ctaContact2}`}
-                className="cursor-pointer mb-4 text-blue-400 underline"
-                target="_blank"
-                rel="noreferrer"
-              >
-                (47) 99966-7797
-              </a>
             </div>
             <a
               href={`https://wa.me/554733047879?text=${CTA_WA_MESSAGES.ctaContact2}`}
@@ -204,25 +195,6 @@ const Contacts = () => {
               rel="noreferrer"
             >
               (47) 3304-7879
-            </a>
-          </div>
-          <div className="flex-1 flex flex-col">
-            <p className='font-bold'>São José dos Pinhas - PR</p>
-            <a
-              className="font-bold cursor-pointer mb-4 text-blue-400 underline"
-              href="https://www.puribras.com.br/home"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Puribras
-            </a>
-            <a
-              href={'https://wa.me/554133851377'}
-              className="cursor-pointer mb-4 text-blue-400 underline"
-              target="_blank"
-              rel="noreferrer"
-            >
-              (41) 3385-1377
             </a>
           </div>
         </div>
