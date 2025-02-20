@@ -7,7 +7,6 @@ import { IconFB, IconInsta } from '../Icon'
 import logo from '../../images/logo.png'
 import logo_mobile from '../../images/logo_mobile.png'
 const navigation = [
-  { name: 'Clientes', href: '#clientes' },
   { name: 'Serviços', href: '#servicos' },
   { name: 'Filtros', href: '#filtros' },
   { name: 'Purificadores', href: '#purificadores' },

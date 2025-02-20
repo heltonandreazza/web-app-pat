@@ -27,12 +27,6 @@ const Navigation = () => {
           </div>
           <div as="nav" className="hidden md:flex space-x-10">
             <a
-              href="/#clientes"
-              className="text-base font-medium text-gray-500 hover:text-gray-900"
-            >
-              Clientes
-            </a>
-            <a
               href="/#servicos"
               className="text-base font-medium text-gray-500 hover:text-gray-900"
             >
@@ -60,9 +54,7 @@ const Navigation = () => {
           <div className="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
             <a
               href={getWhatsUrl(CTA_WA_MESSAGES.ctaContact1)}
-              className="ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 pt-4 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-green-600 hover:bg-green-700"
-              target="_blank"
-              rel="noreferrer"
+              className="cta-button-whats ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 pt-4 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-green-600 hover:bg-green-700"
             >
               Whatsapp
             </a>
@@ -103,12 +95,6 @@ const Navigation = () => {
             </div>
             <div className="py-6 px-5 space-y-6">
               <div className="grid grid-cols-2 gap-y-4 gap-x-8">
-                <a
-                  href="/#clientes"
-                  className="text-base font-medium text-gray-500 hover:text-gray-900"
-                >
-                  Clientes
-                </a>
                 <a
                   href="/#servicos"
                   className="text-base font-medium text-gray-500 hover:text-gray-900"
@@ -162,7 +148,7 @@ const Contacts = () => {
           </div>
           <div className="flex-1 flex flex-col">
             <a
-              className="cursor-pointer mb-4 hover:text-blue-400 font-bold flex flex-col"
+              className="cta-button-email cursor-pointer mb-4 hover:text-blue-400 font-bold flex flex-col"
               href="https://www.google.com/maps/dir/-26.8292028,-49.2839501/R.+Indaial,+418+-+Quintino,+Timb%C3%B3+-+SC,+89120-000/@-26.8317746,-49.284094,15z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x94defc15f85e1795:0xf450e06c2d6c1bf9!2m2!1d-49.268441!2d-26.8363719"
               target="_blank"
             >
@@ -181,18 +167,16 @@ const Contacts = () => {
             <div className="flex">
               <a
                 href={`https://wa.me/5547996567125?text=${CTA_WA_MESSAGES.ctaContact2}`}
-                className="cursor-pointer mb-4 text-blue-400 underline"
+                className="cta-button-whats cursor-pointer mb-4 text-blue-400 underline"
                 target="_blank"
-                rel="noreferrer"
               >
                 (47) 99656-7125
               </a>
             </div>
             <a
               href={`https://wa.me/554733047879?text=${CTA_WA_MESSAGES.ctaContact2}`}
-              className="cursor-pointer mb-4 text-blue-400 underline"
+              className="cta-button-whats cursor-pointer mb-4 text-blue-400 underline"
               target="_blank"
-              rel="noreferrer"
             >
               (47) 3304-7879
             </a>
@@ -212,7 +196,6 @@ const Index = () => {
         <Contacts />
         <Footer
           navigation={[
-            { name: 'Clientes', href: '/#clientes' },
             { name: 'Serviços', href: '/#servicos' },
             { name: 'Filtros', href: '/#filtros' },
             { name: 'Purificadores', href: '/#purificadores' },

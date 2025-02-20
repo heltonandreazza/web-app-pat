@@ -61,7 +61,7 @@ const ProductCard = ({
             <div className="flex">
               <a
                 href={getWhatsUrl(cta)}
-                className="mt-2 rounded-md shadow-md bg-blue-500 hover:bg-blue-600 px-4 py-2 pt-4 text-white"
+                className="cta-button-whats mt-2 rounded-md shadow-md bg-blue-500 hover:bg-blue-600 px-4 py-2 pt-4 text-white"
                 target="_blank"
                 rel="noreferrer"
               >
@@ -94,7 +94,7 @@ const ProductCard = ({
                   <li key={item.label}>
                     <span className="text-medium mx-2 md:mx-4 my-0.5 text-gray-500 flex items-center">
                       {item.icon && <item.icon />}
-                      {item.label}
+                      <span className="mt-1.5">{item.label}</span>
                     </span>
                   </li>
                 ))}
