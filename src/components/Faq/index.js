@@ -29,8 +29,7 @@ const faqs = [
       'Porque com água filtrada em todos os pontos de uso os seus equipamentos como lavadoras, chuveiros e outras máquinas vão permanecer limpos, sem entupir e danificar. Prorrogando sua vida útil. Você vai economizar também com a limpeza da caixa d’água, que vai permanecer limpa por mais tempo. Além de consumir água de qualidade que vai evitar o aparecimento de doenças.',
   },
   {
-    question:
-      'Quando devo trocar o refil do meu purificador de água Everest?',
+    question: 'Quando devo trocar o refil do meu purificador de água Everest?',
     answer:
       'Sua troca é recomendada de 09 a 12 meses de uso, dependendo da qualidade da água recebida. Você encontra Everest em Timbó.  Aqui na Purificadores de Água Timbó trabalhamos com o refil Everest original. Conhecido também como filtro 2x1 original Everest.',
   },
@@ -62,8 +61,9 @@ export default function Example() {
           <p className="text-center text-xl font-medium text-gray-600 sm:text-xl">
             Não encontrou a sua resposta? Fale com um de nossos{' '}
             <a
+              className="cta-button-whats underline text-blue-400 py-3"
               href={getWhatsUrl(CTA_WA_MESSAGES.ctaFaq1)}
-              className="text-blue-400 underline"
+              target="_blank"
             >
               consultores
             </a>

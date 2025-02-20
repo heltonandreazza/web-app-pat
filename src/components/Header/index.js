@@ -85,9 +85,8 @@ const Header = props => {
               <div className="p-6 bg-gray-50 rounded-bl-2xl rounded-br-2xl md:px-8  pb-4 md:pt-6">
                 <a
                   href={link.href}
-                  className="text-base font-medium text-blue-700 hover:text-blue-600 pt-5 md:pt-6"
+                  className="cta-button-whats text-base font-medium text-blue-700 hover:text-blue-600 pt-5 md:pt-6"
                   target="_blank"
-                  rel="noreferrer"
                 >
                   Fale conosco<span aria-hidden="true"> &rarr;</span>
                 </a>

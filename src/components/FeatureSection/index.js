@@ -450,8 +450,7 @@ const FeatureSection = props => {
                 <a
                   href={getWhatsUrl(CTA_WA_MESSAGES.products0)}
                   target="_blank"
-                  className="mt-8 rounded-md shadow-md bg-blue-500 hover:bg-blue-700 px-6 py-4 pt-6 text-white"
-                  rel="noreferrer"
+                  className="cta-button-whats mt-8 rounded-md shadow-md bg-blue-500 hover:bg-blue-700 px-6 py-4 pt-6 text-white"
                 >
                   Agende uma visita gratuita
                 </a>
@@ -467,7 +466,12 @@ const FeatureSection = props => {
                   className="flex mt-4 bg-white shadow-xl rounded-xl py-2"
                 >
                   <div className="flex mx-8 my-4 flex-col md:flex-row items-center ">
-                    <img className={'h-56 w-auto rounded-xl'} src={p.src} />
+                    <div
+                      className="flex justify-center"
+                      style={{ minWidth: '6rem' }}
+                    >
+                      <img className={'h-56 w-auto rounded-xl'} src={p.src} />
+                    </div>
                     <div className="md:px-8 flex flex-col items-center text-center">
                       <a
                         className="text-lg text-gray-800 hover:text-blue-400 cursor-pointer font-bold"
@@ -536,8 +540,8 @@ const FeatureSection = props => {
               <p className="mt-3 text-lg text-gray-600">
                 Quer um purificador que seja refrigerado por compressor e com
                 baixo consumo de energia? Então o{' '}
-                <span className="text-blue-700 font-medium">Everest</span>{' '}
-                é para você!
+                <span className="text-blue-700 font-medium">Everest</span> é
+                para você!
               </p>
               <p className="mt-3 text-lg text-gray-600">
                 Produto certificado pelo{' '}

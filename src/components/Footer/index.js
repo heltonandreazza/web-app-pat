@@ -4,7 +4,6 @@ import { URLS } from '../../utils/constants'
 import { IconFB, IconInsta } from '../Icon'
 
 const DEFAULT_NAVIGATION = [
-  { name: 'Clientes', href: '#clients' },
   { name: 'Serviços', href: '#services' },
   { name: 'Filtros', href: '#filters' },
   { name: 'Purificadores', href: '#purifiers' },

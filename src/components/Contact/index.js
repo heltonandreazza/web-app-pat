@@ -90,16 +90,15 @@ export default function Example() {
               onClick={() =>
                 open('mailto:purificadorespuribrastimbo@gmail.com')
               }
-              className="text-blue-500 font-medium"
+              className="cta-button-email text-blue-500 font-medium py-3"
             >
               purificadorespuribrastimbo@gmail.com
             </a>
             , preenchendo esse formulário ou nos contate via{' '}
             <a
-              className="underline text-blue-400"
+              className="cta-button-whats underline text-blue-400 py-3"
               href={getWhatsUrl(CTA_WA_MESSAGES.ctaContact2)}
               target="_blank"
-              rel="noreferrer"
             >
               whatsapp
             </a>
@@ -213,23 +212,13 @@ export default function Example() {
             </div>
             <div className="sm:col-span-2">
               <button
-                className={`w-full inline-flex items-center justify-center px-6 py-3 border border-transparent rounded-md shadow-sm text-base font-medium text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 pt-6
+                className={`cta-button-whats w-full inline-flex items-center justify-center px-6 py-3 border border-transparent rounded-md shadow-sm text-base font-medium text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 pt-6
                   ${
                     allFields()
                       ? 'bg-blue-500 hover:bg-blue-700 cursor-pointer'
-                      : 'bg-gray-500 hover:bg-gray-700 cursor-not-allowed'
+                      : 'bg-gray-500 hover:bg-gray-700 cursor-not-allowed pointer-events-none'
                   }`}
                 type="submit"
-                // onClick={() => {
-                //   if (allFields()) {
-                //     const subject = 'Contato via site'
-                //     const body = `nome:${nome}%0Atelefone: ${telefone}%0Aemail: ${email}%0Aempresa: ${empresa}%0Amensagem:${mensagem}`
-
-                //     open(
-                //       `mailto:purificadorespuribrastimbo@gmail.com?subject=${subject}&body=${body}`,
-                //     )
-                //   }
-                // }}
               >
                 Enviar
               </button>

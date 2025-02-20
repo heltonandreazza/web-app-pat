@@ -34,7 +34,7 @@ const Sucess = () => (
       <nav className="flex justify-center space-x-4">
         <a
           href={getWhatsUrl(CTA_WA_MESSAGES.Sucess)}
-          className="text-sm font-medium text-gray-500 hover:text-gray-600"
+          className="cta-button-whats text-sm font-medium text-gray-500 hover:text-gray-600"
         >
           Contato
         </a>
