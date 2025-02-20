@@ -30,9 +30,9 @@ const faqs = [
   },
   {
     question:
-      'Quando devo trocar o refil do meu purificador de água Soft Everest?',
+      'Quando devo trocar o refil do meu purificador de água Everest?',
     answer:
-      'Sua troca é recomendada de 09 a 12 meses de uso, dependendo da qualidade da água recebida. Você encontra Soft Everest em Timbó.  Aqui na Purificadores de Água Timbó trabalhamos com o refil Everest original. Conhecido também como filtro 2x1 original Soft Everest.',
+      'Sua troca é recomendada de 09 a 12 meses de uso, dependendo da qualidade da água recebida. Você encontra Everest em Timbó.  Aqui na Purificadores de Água Timbó trabalhamos com o refil Everest original. Conhecido também como filtro 2x1 original Everest.',
   },
   {
     question:
