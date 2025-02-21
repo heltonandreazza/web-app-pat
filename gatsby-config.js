@@ -1,8 +1,8 @@
 require('dotenv').config({
-  path: `.env.${process.env.NODE_ENV}`,
-})
+  path: `.env`,
+});
 
-const path = require('path')
+const path = require('path');
 
 module.exports = {
   plugins: [
@@ -14,8 +14,17 @@ module.exports = {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'backgrounds',
-        path: path.join(__dirname, 'src', 'images', 'bgs'), // wherever background images are stored
+        path: path.join(__dirname, 'src', 'images', 'bgs'),
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-google-gtag',
+      options: {
+        trackingIds: [process.env.GATSBY_GOOGLE_ADS_ID], // Uses the environment variable
+        gtagConfig: { anonymize_ip: true },
+        pluginConfig: { head: true },
+        includeInDevelopment: true,
       },
     },
   ],
-}
+};

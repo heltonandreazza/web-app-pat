@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import useInterval from '../../hooks/useInterval'
-import { getWhatsUrl } from '../../utils'
+import { getWhatsUrl, handleCtaClick } from '../../utils'
 import { CTA_WA_MESSAGES } from '../../utils/constants'
 import Navigator from '../Navigator'
 import Slider from '../Slider'
@@ -23,6 +23,7 @@ const Hero = () => {
             viewBox="0 0 100 100"
             preserveAspectRatio="none"
             aria-hidden="true"
+            style={{ zIndex: '-1' }}
           >
             <polygon points="50,0 100,0 50,100 0,100" />
           </svg>
@@ -54,9 +55,10 @@ const Hero = () => {
               <div className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
                 <div className="rounded-md shadow">
                   <a
-                    href={getWhatsUrl(CTA_WA_MESSAGES.heroCta1)}
+                    href="#"
                     target="_blank"
                     className="cta-button-whats w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 md:py-4 md:text-lg md:px-10 pt-5 md:pt-7"
+                    onClick={handleCtaClick(CTA_WA_MESSAGES.heroCta2)}
                   >
                     Agende uma visita gratuita
                   </a>
@@ -76,7 +78,14 @@ const Hero = () => {
         </div>
       </div>
       <div className="w-full lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2 md:h-full">
-        <Slider images={['banner.jpeg', 'banner1.jpeg', 'banner2.jpeg', 'banner3.jpeg']} />
+        <Slider
+          images={[
+            'banner.jpeg',
+            'banner1.jpeg',
+            'banner2.jpeg',
+            'banner3.jpeg',
+          ]}
+        />
       </div>
     </div>
   )

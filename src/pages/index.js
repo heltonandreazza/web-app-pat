@@ -7,6 +7,7 @@ import Footer from '../components/Footer'
 import Header from '../components/Header'
 import Hero from '../components/Hero'
 import LogoClound from '../components/LogoClound2'
+import { setupGclid } from '../utils/gtag'
 import '../styles/global.css'
 
 console.log(`INDEX TOKEN ${process.env}`)
@@ -26,8 +27,13 @@ const Index = props => {
     setInstaNodes(result?.data)
   }
 
+  async function setupGtag() {
+    setupGclid()
+  }
+
   useEffect(() => {
     loadInstaNodes()
+    setupGtag()
   }, [])
 
   return (
