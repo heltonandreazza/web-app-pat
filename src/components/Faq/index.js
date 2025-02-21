@@ -1,8 +1,8 @@
 import { Disclosure } from '@headlessui/react'
 import { ChevronDownIcon } from '@heroicons/react/outline'
 import React from 'react'
-import { getWhatsUrl } from '../../utils'
 import { CTA_WA_MESSAGES } from '../../utils/constants'
+import { handleCtaClick } from '../../utils'
 
 const faqs = [
   {
@@ -62,7 +62,7 @@ export default function Example() {
             Não encontrou a sua resposta? Fale com um de nossos{' '}
             <a
               className="cta-button-whats underline text-blue-400 py-3"
-              href={getWhatsUrl(CTA_WA_MESSAGES.ctaFaq1)}
+              onClick={handleCtaClick(CTA_WA_MESSAGES.ctaFaq1)}
               target="_blank"
             >
               consultores

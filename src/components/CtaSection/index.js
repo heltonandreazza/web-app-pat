@@ -1,7 +1,7 @@
 import React from 'react'
 import ctabanner from '../../images/ctabanner.jpeg'
-import { getWhatsUrl } from '../../utils'
 import { CTA_WA_MESSAGES } from '../../utils/constants'
+import { handleCtaClick } from '../../utils'
 
 const CtaSection = props => {
   return (
@@ -22,7 +22,7 @@ const CtaSection = props => {
                 assunto! 😀
               </p>
               <a
-                href={getWhatsUrl(CTA_WA_MESSAGES.ctaBanner1)}
+                onClick={handleCtaClick(CTA_WA_MESSAGES.ctaBanner1)}
                 className="cta-button-whats mt-8 bg-white border border-transparent rounded-md shadow px-5 py-3 inline-flex items-center text-base font-medium text-blue-600 hover:bg-blue-50 pt-5 md:pt-6"
               >
                 Fale conosco

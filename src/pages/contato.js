@@ -5,7 +5,7 @@ import Contact from '../components/Contact'
 import Footer from '../components/Footer'
 import logo from '../images/logo.png'
 import '../styles/global.css'
-import { getWhatsUrl } from '../utils'
+import { getWhatsUrl, handleCtaClick } from '../utils'
 import { CTA_WA_MESSAGES } from '../utils/constants'
 
 const Navigation = () => {
@@ -53,7 +53,7 @@ const Navigation = () => {
           </div>
           <div className="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
             <a
-              href={getWhatsUrl(CTA_WA_MESSAGES.ctaContact1)}
+              onClick={handleCtaClick(CTA_WA_MESSAGES.ctaContact1)}
               className="cta-button-whats ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 pt-4 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-green-600 hover:bg-green-700"
             >
               Whatsapp
@@ -166,7 +166,7 @@ const Contacts = () => {
             </a>
             <div className="flex">
               <a
-                href={`https://wa.me/5547996567125?text=${CTA_WA_MESSAGES.ctaContact2}`}
+                onClick={handleCtaClick(CTA_WA_MESSAGES.ctaContact2)}
                 className="cta-button-whats cursor-pointer mb-4 text-blue-400 underline"
                 target="_blank"
               >
@@ -174,7 +174,7 @@ const Contacts = () => {
               </a>
             </div>
             <a
-              href={`https://wa.me/554733047879?text=${CTA_WA_MESSAGES.ctaContact2}`}
+              onClick={handleCtaClick(CTA_WA_MESSAGES.ctaContact2)}
               className="cta-button-whats cursor-pointer mb-4 text-blue-400 underline"
               target="_blank"
             >

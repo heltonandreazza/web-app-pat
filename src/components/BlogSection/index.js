@@ -55,11 +55,6 @@ const BlogSection = ({ items, ...props }) => {
         <div className="desktop hidden md:flex gap-8 mt-8">
           <InstagramEmbedPost
             postUrl={
-              'https://www.instagram.com/p/DFsGqm3RVBe/?utm_source=ig_embed&amp;utm_campaign=loading'
-            }
-          />
-          <InstagramEmbedPost
-            postUrl={
               'https://www.instagram.com/p/DFbEdZ7oI3D/?utm_source=ig_embed&amp;utm_campaign=loading'
             }
           />
@@ -68,11 +63,16 @@ const BlogSection = ({ items, ...props }) => {
               'https://www.instagram.com/p/DFu3kGhNWYS/?utm_source=ig_embed&amp;utm_campaign=loading'
             }
           />
+          <InstagramEmbedPost
+            postUrl={
+              'https://www.instagram.com/p/DEZoeuNxFx7/?utm_source=ig_embed&amp;utm_campaign=loading'
+            }
+          />
         </div>
         <div className="mobile flex md:hidden flex-col mt-8">
           <InstagramEmbedPost
             postUrl={
-              'https://www.instagram.com/p/DFsGqm3RVBe/?utm_source=ig_embed&amp;utm_campaign=loading'
+              'https://www.instagram.com/p/DFbEdZ7oI3D/?utm_source=ig_embed&amp;utm_campaign=loading'
             }
           />
         </div>
