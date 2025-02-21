@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
-import { getWhatsUrl } from '../../utils'
+import { getWhatsUrl, handleCtaClick } from '../../utils'
 import { CTA_WA_MESSAGES } from '../../utils/constants'
+import { gtagReportConversion } from '../../utils/gtag'
 
 export default function Example() {
   const [nome, setNome] = useState('')
@@ -97,7 +98,7 @@ export default function Example() {
             , preenchendo esse formulário ou nos contate via{' '}
             <a
               className="cta-button-whats underline text-blue-400 py-3"
-              href={getWhatsUrl(CTA_WA_MESSAGES.ctaContact2)}
+              onClick={handleCtaClick(CTA_WA_MESSAGES.ctaContact2)}
               target="_blank"
             >
               whatsapp
@@ -106,20 +107,25 @@ export default function Example() {
           </p>
         </div>
         <form
-          action='/success/'
-          name='CONTATO-CLIENTES-PURIFICADORES-TIMBO'
-          method='post'
-          netlify-honeypot='bot-field'
-          data-netlify='true'
-          className='mt-12'
+          action="/success/"
+          name="CONTATO-CLIENTES-PURIFICADORES-TIMBO"
+          method="post"
+          netlify-honeypot="bot-field"
+          data-netlify="true"
+          className="mt-12"
           subject="Contato do cliente recebido via site!"
         >
-          <input type='hidden' name='form-name' value='CONTATO-CLIENTES-PURIFICADORES-TIMBO' />
+          <input
+            type="hidden"
+            name="form-name"
+            value="CONTATO-CLIENTES-PURIFICADORES-TIMBO"
+          />
           <div className="grid grid-cols-1 gap-y-6">
             <div>
-              <p className='hidden'>
+              <p className="hidden">
                 <label>
-                  Don’t fill this out if you’re human: <input name='bot-field' />
+                  Don’t fill this out if you’re human:{' '}
+                  <input name="bot-field" />
                 </label>
               </p>
               <label className="block text-sm font-medium text-gray-700">
@@ -219,6 +225,7 @@ export default function Example() {
                       : 'bg-gray-500 hover:bg-gray-700 cursor-not-allowed pointer-events-none'
                   }`}
                 type="submit"
+                onClick={async () => await gtagReportConversion()}
               >
                 Enviar
               </button>

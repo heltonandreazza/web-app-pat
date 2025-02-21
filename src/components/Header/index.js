@@ -1,27 +1,27 @@
 import { BeakerIcon, CogIcon, HomeIcon } from '@heroicons/react/outline'
 import React from 'react'
-import { getWhatsUrl } from '../../utils'
-import { CTA_WA_MESSAGES } from '../../utils/constants'
 import services from '../../images/services.jpeg'
+import { CTA_WA_MESSAGES } from '../../utils/constants'
+import { handleCtaClick } from '../../utils'
 
 const supportLinks = [
   {
     name: 'Projeto e Instalação',
-    href: getWhatsUrl(CTA_WA_MESSAGES.servicesCta1),
+    href: CTA_WA_MESSAGES.servicesCta1,
     description:
       'Através de visita in loco e coleta de informações é possível dimensionar o aparelho ideal para a necessidade do cliente e a partir daí realizamos a venda e a instalação do produto.',
     icon: HomeIcon,
   },
   {
     name: 'Manutenção preventiva',
-    href: getWhatsUrl(CTA_WA_MESSAGES.servicesCta2),
+    href: CTA_WA_MESSAGES.servicesCta2,
     description:
       'Oferecemos planos mensais, trimestrais, semestrais e anuais de manutenção preventiva residencial e empresarial. Visando equipamentos em perfeito funcionamento e garantindo água de qualidade, seja para consumo humano ou para o processo produtivo da sua empresa.',
     icon: CogIcon,
   },
   {
     name: 'Análise e Tratamento de Água',
-    href: getWhatsUrl(CTA_WA_MESSAGES.servicesCta3),
+    href: CTA_WA_MESSAGES.servicesCta3,
     description:
       'É realizada coleta amostral da água através de laboratório especializado, e após o resultado dessa análise, indicamos o melhor tratamento para tornar a água potável.',
     icon: BeakerIcon,
@@ -84,7 +84,7 @@ const Header = props => {
               </div>
               <div className="p-6 bg-gray-50 rounded-bl-2xl rounded-br-2xl md:px-8  pb-4 md:pt-6">
                 <a
-                  href={link.href}
+                  onClick={handleCtaClick(link.href)}
                   className="cta-button-whats text-base font-medium text-blue-700 hover:text-blue-600 pt-5 md:pt-6"
                   target="_blank"
                 >

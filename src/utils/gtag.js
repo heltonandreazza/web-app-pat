@@ -2,7 +2,7 @@ export const gtagReportConversion = url => {
   if (typeof window !== 'undefined' && window.gtag) {
     return new Promise(resolve => {
       window.gtag('event', 'conversion', {
-        send_to: 'AW-16816228435/FmFwCN2uoKEaENOQzdI-',
+        send_to: 'AW-16816228435/Lb27CO-3oaEaENOQzdI-',
         gclid: getGclid() || undefined, // Pass GCLID if available
         event_callback: () => {
           resolve() // Ensure event is processed before proceeding

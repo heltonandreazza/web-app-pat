@@ -2,10 +2,10 @@ import { CheckIcon, LightningBoltIcon } from '@heroicons/react/outline'
 import React, { useState } from 'react'
 import cores3 from '../../images/cores3.png'
 import cores4 from '../../images/cores4.png'
-import filtroResidencial from '../../images/filtroResidencial.png'
-import filtroIndustrial from '../../images/filtroIndustrial.png'
 import filtroAutomatizada from '../../images/filtroAutomatizada.png'
-import { getWhatsUrl } from '../../utils'
+import filtroIndustrial from '../../images/filtroIndustrial.png'
+import filtroResidencial from '../../images/filtroResidencial.png'
+import { getWhatsUrl, handleCtaClick } from '../../utils'
 import { CTA_WA_MESSAGES } from '../../utils/constants'
 import ProductCard from '../ProductCard'
 
@@ -448,7 +448,7 @@ const FeatureSection = props => {
               </div>
               <div className="flex">
                 <a
-                  href={getWhatsUrl(CTA_WA_MESSAGES.products0)}
+                  onClick={handleCtaClick(CTA_WA_MESSAGES.products0)}
                   target="_blank"
                   className="cta-button-whats mt-8 rounded-md shadow-md bg-blue-500 hover:bg-blue-700 px-6 py-4 pt-6 text-white"
                 >
@@ -482,10 +482,9 @@ const FeatureSection = props => {
                       </a>
                       <p className="text-gray-500 pt-4">{p.desc}</p>
                       <a
-                        href={getWhatsUrl(p.cta)}
+                        onClick={handleCtaClick(p.cta)}
                         className="mt-2 rounded-md shadow-md bg-blue-500 hover:bg-blue-600 px-4 py-2 pt-4 text-white"
                         target="_blank"
-                        rel="noreferrer"
                       >
                         Agende uma visita gratuita
                       </a>

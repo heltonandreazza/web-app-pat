@@ -1,5 +1,5 @@
 import React from 'react'
-import { getWhatsUrl } from '../../utils'
+import { getWhatsUrl, handleCtaClick } from '../../utils'
 import Slider from '../Slider'
 import useMediaQuery from '@material-ui/core/useMediaQuery'
 
@@ -60,10 +60,9 @@ const ProductCard = ({
             {children}
             <div className="flex">
               <a
-                href={getWhatsUrl(cta)}
+                onClick={handleCtaClick(cta)}
                 className="cta-button-whats mt-2 rounded-md shadow-md bg-blue-500 hover:bg-blue-600 px-4 py-2 pt-4 text-white"
                 target="_blank"
-                rel="noreferrer"
               >
                 Eu quero esse
               </a>
